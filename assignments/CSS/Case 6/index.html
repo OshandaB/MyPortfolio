@@ -7,106 +7,125 @@
     <title>Document</title>
     <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
     <style>
-      body{
-        font-size: 0;
-      }
-        img{
-            width: 100%;
-          height: 100%;
-        }
-        body>div:nth-child(1){
-            display: inline-block;
-            width: 50%;
-            height: 33.3vh;
-        }
-        body>div:nth-child(2){
-            display: inline-block;
-            width: 25%;
-            height: 33.3vh;
-        }
-        body>div:nth-child(3){
-            position: absolute;
-            display: inline-block;
-            width: 25%;
-            top: 0;
-           right: 0;
+        body{
+            width: 100vw;
             height: 100vh;
-        }
-        body>div:nth-child(4){
-           
-    
-    width: 25%;
-    height: 33.3vh;
-    position: absolute;
-top: 33.3%;
-
-   
-   
-        }
-        body>div:nth-child(5){
-            position: absolute;
+          display: grid;
+          grid-template-rows: repeat(3,1fr);
+          grid-template-columns: repeat(4,1fr);
           
-           width: 25%;
-           height: 33.3vh;
-           left : 25%;
+        }
+      
+        
+      div:nth-child(1){
+      
+        background: url(assests/pexels-pixabay-326055.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 1/3;
        }
-       body>div:nth-child(6){
-        position: absolute;
-            
-            left : 50%;
-           width: 25%;
-           height: 33.3vh;
+   
+       div:nth-child(2){
+        
+        background: url(assests/pexels-eberhard-grossgasteiger-1612351.jpg);
+            background-position: center;
+            background-size: cover;
        }
-       body>div:nth-child(7){
-           
-    
-           width: 25%;
-           height: 33.3vh;
-           position: absolute;
-       top: 66.66%;
+      div:nth-child(3){
        
-          
-          
-               }
-               body>div:nth-child(8){
-            position: absolute;
-            width: 50%;
-            height: 33.3vh;
-            left: 25%;
-            top: 66.66%;
-        }
-    </style>
+        background: url(assests/pexels-sami-abdullah-9155302.jpg);
+            background-position: center;
+            background-size: cover;
+           grid-row: 1/4;
+           grid-column: 4/5;
+            
+       }
+      div:nth-child(4){
+        
+        background: url(assests/pexels-george-desipris-1028637.jpg);
+            background-position: center;
+            background-size: cover;
+
+       }
+       
+       div:nth-child(5){
+      
+       
+        background: url(assests/pexels-irina-iriser-1379636.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+
+  div:nth-child(6){
+   
+    background: url(assests/pexels-pixabay-40896.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+ div:nth-child(7){
+  
+    background: url(assests/pexels-irina-iriser-1379636.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+ div:nth-child(8){
+   
+    background: url(assests/pexels-bychlo-18077629.jpg);
+            background-position: center;
+            background-size: cover;
+            grid-column: 2/4;
+            grid-row: 3/4;
+  }
+  div:nth-child(9){
+      
+       
+    background: url(assests/pexels-pixabay-45863.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+
+  div:nth-child(10){
+   
+    background: url(assests/pexels-irina-iriser-1379636.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+ div:nth-child(11){
+  
+    background: url(assests/pexels-pixabay-326055.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+ div:nth-child(12){
+   
+    background: url(assests/pexels-irina-iriser-1379636.jpg);
+            background-position: center;
+            background-size: cover;
+  }
+   
+   </style>
 </head>
 
+   
 <body>
-    <div>
-        <img src="assests/pexels-irina-iriser-1379636.jpg" alt="">
-    </div>
+    
+        <div>
 
-    <div>
-        <img src="assests/pexels-george-desipris-1028637.jpg" alt="">
-    </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+     
 
-    <div>
-        <img src="assests/pexels-sami-abdullah-9155302.jpg" alt="">
-    </div>
-
-    <div>
-        <img src="assests/pexels-pixabay-326055.jpg" alt="">
-    </div>
-
-    <div>
-        <img src="assests/pexels-pixabay-40896.jpg" alt="">
-    </div>
-
-    <div><img src="assests/pexels-pixabay-45863.jpg" alt=""></div>
-
-    <div>
-        <img src="assests/pexels-eberhard-grossgasteiger-1612351.jpg" alt="">
-    </div>
-
-    <div>
-        <img src="assests/pexels-bychlo-18077629.jpg" alt="">
-    </div>
+   
+   
 </body>
 </html>
