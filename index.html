@@ -18,17 +18,18 @@
     <link rel="stylesheet" href="assets/resourses/normalize/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         ::-webkit-scrollbar {
-    width: 8px;
-    /*background: #A8A8A8;*/
-    background: black;
-}
+            width: 8px;
+            /*background: #A8A8A8;*/
+            background: black;
+        }
 
-::-webkit-scrollbar-thumb {
-    background: rgba(43, 217, 132, 1);
-}
+        ::-webkit-scrollbar-thumb {
+            background: rgba(43, 217, 132, 1);
+        }
+
         /* header styles */
         header {
             top: 0;
@@ -39,13 +40,13 @@
             z-index: 4;
         }
 
-        header>nav {
+        header > nav {
             position: absolute;
             right: 100px;
             top: 10px;
         }
 
-        header>nav>menu>li {
+        header > nav > menu > li {
             display: inline-block;
             padding: 10px;
             cursor: pointer;
@@ -54,101 +55,103 @@
 
         }
 
-        header>nav>menu>li>a {
+        header > nav > menu > li > a {
             text-decoration: none;
             color: rgba(255, 255, 255, 1);
             font-family: 'Montserrat', sans-serif;
         }
 
-        header>nav>menu>li>a:hover {
+        header > nav > menu > li > a:hover {
             color: rgba(7, 193, 144, 1);
         }
-        header>nav>menu>li>a::after {
+
+        header > nav > menu > li > a:first-child:after {
             content: '';
-    display: block;
-    width: 43%;
-    height: 5px;
-    background-color: #7461E2;
-    border-radius: 26%;
-    transition: width .3s;
-        }
-     
-        header>nav>menu>li>a:hover ::after {
-                      
+            display: block;
             width: 43%;
-    transition: width .3s;
+            height: 5px;
+            background-color: #7461E2;
+            border-radius: 26%;
+            transition: width .3s;
         }
-      
-        header>nav>menu>li:last-child {
+
+        header > nav > menu > li > a:hover ::after {
+
+            width: 43%;
+            transition: width .3s;
+        }
+
+        header > nav > menu > li:last-child {
             position: relative;
             left: 33px;
         }
 
-        header>div>div:nth-child(2) {
+        header > div > div:nth-child(2) {
             position: absolute;
             top: 10px;
             left: 100px;
         }
 
-        header>div>img:first-child {
+        header > div > img:first-child {
 
             margin-top: 3px;
         }
 
-        header>div>div:nth-child(2)>hgroup>h3 {
+        header > div > div:nth-child(2) > hgroup > h3 {
             margin-bottom: 0;
             font-size: 27px;
             color: rgba(42, 215, 127, 1);
             font-family: 'Montserrat', sans-serif;
         }
 
-        header>div>div:nth-child(2)>hgroup>h3::first-letter {
+        header > div > div:nth-child(2) > hgroup > h3::first-letter {
 
             color: rgba(255, 255, 255, 1);
             font-family: 'Montserrat', sans-serif;
         }
 
-        header>div>div:nth-child(2)>hgroup>h5 {
+        header > div > div:nth-child(2) > hgroup > h5 {
             margin-top: 0;
             font-size: 18px;
             color: rgba(255, 255, 255, 1);
             font-family: 'Montserrat', sans-serif;
         }
 
-        header>div:nth-child(1)>div:nth-child(2)>hgroup {
+        header > div:nth-child(1) > div:nth-child(2) > hgroup {
             margin-top: -14px;
         }
 
-        header>div:nth-child(3) {
-            width: calc(100%/5.8);
+        header > div:nth-child(3) {
+            width: calc(100% / 5.8);
             height: 100%;
             position: absolute;
             top: 0;
             right: 0;
-            background:rgba(43, 217, 132, 1);
+            background: rgba(43, 217, 132, 1);
             z-index: 1;
         }
 
-        header>nav>menu {
+        header > nav > menu {
             position: relative;
             z-index: 3;
         }
 
         /* main Style */
-        main{
+        main {
             overflow: hidden;
         }
-        main>section:nth-child(1) {
+
+        main > section:nth-child(1) {
             position: relative;
             margin-top: 100px;
-           
-          
-           background: rgba(23, 28, 34, 1);
-          
+
+
+            background: rgba(23, 28, 34, 1);
+
         }
 
-        main>section:nth-child(1)>div:nth-child(2) {
-           width: 50%;
+        main > section:nth-child(1) > div:nth-child(2) {
+            width: 50%;
             position: relative;
             bottom: 400px;
             /* left: 20px; */
@@ -157,8 +160,8 @@
             height: 33vh;
         }
 
-        main>section:nth-child(1)>aside {
-            width: calc(100%/5.8);
+        main > section:nth-child(1) > aside {
+            width: calc(100% / 5.8);
             height: 100%;
             position: absolute;
             top: 0;
@@ -166,502 +169,729 @@
             background: rgba(43, 217, 132, 1);
             z-index: 2;
         }
-        main>section:nth-child(1)>section{
+
+        main > section:nth-child(1) > section {
             line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    display: inline-block;
-    position: relative;
-    top: 150px;
-    left: 201px;
+            -webkit-text-size-adjust: 100%;
+            display: inline-block;
+            position: relative;
+            top: 150px;
+            left: 201px;
         }
-        
-        main>section:nth-child(1)>div:nth-child(2)>img{
+
+        main > section:nth-child(1) > div:nth-child(2) > img {
             width: 100%;
             z-index: 1;
         }
-        main>section:nth-child(1)>section>hgroup>h4{
+
+        main > section:nth-child(1) > section > hgroup > h4 {
             font-size: 25px;
             font-family: 'Montserrat', sans-serif;
             color: rgba(255, 255, 255, 1);
         }
-        main>section:nth-child(1)>section>hgroup>h1{
+
+        main > section:nth-child(1) > section > hgroup > h1 {
             line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    margin: 0.67em 0;
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(255, 255, 255, 1);
-    position: relative;
-    margin-top: 0;
-    top: -20px;
-    font-size: 57px;
+            -webkit-text-size-adjust: 100%;
+            margin: 0.67em 0;
+            font-family: 'Montserrat', sans-serif;
+            color: rgba(255, 255, 255, 1);
+            position: relative;
+            margin-top: 0;
+            top: -20px;
+            font-size: 57px;
         }
-        main>section:nth-child(1)>section>hgroup>h1>span{
-            
-            color:  rgba(42, 215, 127, 1);
+
+        main > section:nth-child(1) > section > hgroup > h1 > span {
+
+            color: rgba(42, 215, 127, 1);
         }
-        main>section:nth-child(1)>section>article{
+
+        main > section:nth-child(1) > section > article {
             line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    position: relative;
-    top: -35px;
+            -webkit-text-size-adjust: 100%;
+            position: relative;
+            top: -35px;
         }
-        main>section:nth-child(1)>section>article>p>b{
+
+        main > section:nth-child(1) > section > article > p > b {
             line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    color: rgba(255, 255, 255, 1);
-    font-weight: bolder;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-   
-    position: relative;
-    top: 8px;
+            -webkit-text-size-adjust: 100%;
+            color: rgba(255, 255, 255, 1);
+            font-weight: bolder;
+            font-size: 30px;
+            font-family: 'Montserrat', sans-serif;
+
+            position: relative;
+            top: 8px;
         }
-        main>section:nth-child(1)>section>article>p{
+
+        main > section:nth-child(1) > section > article > p {
             line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    color: rgba(255, 255, 255, 1);
-    font-weight: bolder;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+            -webkit-text-size-adjust: 100%;
+            color: rgba(255, 255, 255, 1);
+            font-weight: bolder;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
         }
-        main>section:nth-child(1)>section>button{
-            border: 1px solid rgb(43 217 132) ;
+
+        main > section:nth-child(1) > section > button {
+            border: 1px solid rgb(43 217 132);
             color: #FFFF;
-        text-align: center;
+            text-align: center;
             position: relative;
             font-weight: bold;
-          bottom: 30px;
+            bottom: 30px;
             font-family: 'Montserrat', sans-serif;
-            box-shadow:8px 8px 20px 0px rgb(43 217 132);
+            box-shadow: 8px 8px 20px 0px rgb(43 217 132);
             width: 140px;
             height: 50px;
-          border-radius: 0.5rem;
-          
-          background:  rgba(43, 217, 132, 1);;
-          cursor: pointer;
+            border-radius: 0.5rem;
+
+            background: rgba(43, 217, 132, 1);;
+            cursor: pointer;
         }
+
         /* about me */
-        main>section:nth-child(2){
+        main > section:nth-child(2) {
+
+            position: relative;
             background: rgba(32, 39, 47, 1);
-            border: 2px solid red;
-           
+
+            font-size: 18px;
+
         }
-        main>section:nth-child(2)>div:first-child{
-            background: url(../MyPortfolio/assets/resourses/images/about.png);
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 400px;
+
+        main > section:nth-child(2) > aside {
+
+            height: 100vh;
+            position: relative;
+            left: 100px;
+
+
         }
-        main>section:nth-child(2)>div:nth-child(2){
+
+        main > section:nth-child(2) > aside > div:nth-child(4) {
             background: url(../MyPortfolio/assets/resourses/images/about1.png);
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 400px;
+            background-size: cover;
+            background-position: center;
+            width: 700px;
+            height: 400px;
+            position: absolute;
+            top: 130px;
+            left: -20px;
         }
-       
+
+        main > section:nth-child(2) > aside > div:nth-child(3) {
+            background: url(../MyPortfolio/assets/resourses/images/about.png);
+            background-size: cover;
+            background-position: center;
+            width: 700px;
+            height: 400px;
+            position: absolute;
+            top: 30px;
+            left: -120px;
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(1) {
+            display: inline-block;
+            background: rgba(43, 217, 132, 1);
+            border: 5px solid black;
+            border-radius: 20px;
+            width: 20%;
+            height: 50%;
+            margin-top: 80px;
+            margin-left: 50px;
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(2) {
+            position: absolute;
+            top: 180px;
+            left: 250px;
+            display: inline-block;
+            background: rgba(43, 217, 132, 1);
+            border: 5px solid black;
+            border-radius: 20px;
+            width: 15%;
+            height: 50%;
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(5) {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+
+            background: url(../MyPortfolio/assets/resourses/images/Your_text__3_-removebg-preview.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            width: 55%;
+            height: 36%;
+            z-index: 3;
+            left: -251px;
+            bottom: 350px;
+
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(6) {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+
+            background: url(../MyPortfolio/assets/resourses/images/Your_text__3_-removebg-preview.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            width: 55%;
+            height: 36%;
+            z-index: 3;
+            left: -93px;
+            bottom: 330px;
+
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(7) {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+
+            background: url(../MyPortfolio/assets/resourses/images/Your_text__3_-removebg-preview.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            width: 57%;
+            height: 36%;
+            z-index: 3;
+            left: 90px;
+            bottom: 850px;
+
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(7) > h4 {
+            font-size: 18px;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            text-align: center;
+            position: relative;
+            top: 30px;
+            left: -56px;
+
+
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(6) > h4 {
+            font-size: 18px;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            text-align: center;
+            position: relative;
+            top: 35px;
+            left: -56px;
+
+        }
+
+        main > section:nth-child(2) > aside > div:nth-child(5) > h4 {
+            font-size: 18px;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            text-align: center;
+            position: relative;
+            top: 35px;
+            left: -56px;
+
+        }
+
+        main > section:nth-child(2) > section {
+            position: absolute;
+            top: 10%;
+            right: 20%;
+        }
+
+        main > section:nth-child(2) > section > hgroup > h3 {
+
+            font-size: 100%;
+            color: #FFFF;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        main > section:nth-child(2) > section > hgroup > h1 {
+            font-weight: bolder;
+            font-size: 230%;
+            color: rgba(42, 215, 127, 1);
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        main > section:nth-child(2) > section > article {
+
+            font-size: 100%;
+            color: #FFFF;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        main > section:nth-child(2) > section > article > p {
+            font-weight: bolder;
+
+        }
+
+        main > section:nth-child(2) > section > article > ul > li {
+            font-weight: bold;
+
+        }
+
+        main > section:nth-child(2) > section > article > ul > li > span {
+            color: rgba(42, 215, 127, 1);
+        }
+
+        main > section:nth-child(2) > section > button {
+            position: relative;
+            left: 50%;
+            background-color: rgba(42, 215, 127, 1);
+            width: 150px;
+            height: 40px;
+            border-radius: 15px;
+            color: rgba(42, 215, 127, 1);
+            box-shadow: 5px 4px 19px 0px rgb(43 217 132);
+        }
+
+        main > section:nth-child(2) > section > button > a {
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            text-decoration: none;
+        }
+    /*    service */
+        main>section:nth-child(3){
+   position: relative;
+            background-color: rgba(23, 28, 34, 1);
+        }
+        main>section:nth-child(3)>hgroup>h4{
+            margin-top: 0;
+        }
     </style>
 </head>
 
 <body>
-    <header>
+<header>
+    <div>
+        <img width="100px" src="assets/resourses/images/logo.png" alt="">
         <div>
-            <img width="100px" src="assets/resourses/images/logo.png" alt="">
-            <div>
-                <hgroup>
-                    <h3>OBanuka</h3>
-                    <h5>Software Engineer</h5>
-                </hgroup>
-            </div>
+            <hgroup>
+                <h3>OBanuka</h3>
+                <h5>Software Engineer</h5>
+            </hgroup>
+        </div>
+    </div>
+
+    <nav>
+        <menu>
+            <li>
+                <a href="Home">Home</a>
+            </li>
+            <li><a href="About">About</a></li>
+            <li><a href="Service">Service</a></li>
+            <li><a href="Skill">Skill</a></li>
+            <li><a href="Project">Project</a></li>
+            <li><a href="Gallery">Gallery</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="Professional CV Resume.pdf" download="download_cv">Download CV</a></li>
+        </menu>
+
+    </nav>
+    <div></div>
+</header>
+
+<main>
+    <section>
+
+        <section>
+            <hgroup>
+                <h4>HELLO,I'M</h4>
+                <h1>Oshanda <span>Banuka</span></h1>
+            </hgroup>
+            <article>
+                <p><b>A Professional Software Engineer</b><br>
+                    <br>
+                    I'm a Software Engineer in Sri Lanka and I'm very<br>
+                    Passionate and dedicated to my Work.<br>
+                    Welcome to Portfolio World.</p>
+            </article>
+            <!-- <a href="Hire Me">Hire Me</a> -->
+            <button>Hire me</button>
+        </section>
+        <div>
+            <img src="assets/resourses/images/welcome_photo.png" alt="">
         </div>
 
-        <nav>
-            <menu>
-                <li>
-                    <a href="Home">Home</a>
-                </li>
-                <li><a href="About">About</a></li>
-                <li><a href="Service">Service</a></li>
-                <li><a href="Skill">Skill</a></li>
-                <li><a href="Project">Project</a></li>
-                <li><a href="Gallery">Gallery</a></li>
-                <li><a href="Contact">Contact</a></li>
-                <li><a href="Professional CV Resume.pdf" download="download_cv">Download CV</a></li>
-            </menu>
+        <aside>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </aside>
+    </section>
 
-        </nav>
-        <div></div>
-    </header>
 
-    <main>
-        <section>
+    <section>
 
-            <section>
-                <hgroup>
-                    <h4>HELLO,I'M</h4>
-                    <h1>Oshanda <span>Banuka</span></h1>
-                </hgroup>
-                <article>
-                    <p><b>A Professional Software Engineer</b><br>
-                        <br>
-                        I'm a Software Engineer in Sri Lanka and I'm very<br>
-                        Passionate and dedicated to my Work.<br>
-                        Welcome to Portfolio World.</p>
-                </article>
-                <!-- <a href="Hire Me">Hire Me</a> -->
-                <button>Hire me</button>
-            </section>
+        <aside>
+            <div></div>
             <div>
-                <img  src="assets/resourses/images/welcome_photo.png" alt="">
+
             </div>
-
-            <aside>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </aside>
-        </section>
-
-
-
+            <div></div>
+            <div></div>
+            <div>
+                <h4 style=" color: rgba(42, 215, 127, 1); font-family: 'Montserrat', sans-serif ">10+</h4>
+                <h4 style="font-size: 14px;
+                     line-height: 1.15;
+                     -webkit-text-size-adjust: 100%;
+                     text-align: center;
+                     position: relative;
+                     top: 15px;
+                     left: -39px;
+                     color: #FFFF; font-family: 'Montserrat', sans-serif">Complete <br> Projects</h4>
+            </div>
+            <div><h4 style=" color: rgba(42, 215, 127, 1); font-family: 'Montserrat', sans-serif ">1+</h4>
+                <h4 style="font-size: 14px;
+                     line-height: 1.15;
+                     -webkit-text-size-adjust: 100%;
+                     text-align: center;
+                     position: relative;
+                     top: 15px;
+                     left: -39px;
+                     color: #FFFF; font-family: 'Montserrat', sans-serif">Year Of <br> Experince</h4></div>
+            <div>
+                <h4 style="font-size: 11px;
+                     line-height: 1.15;
+                     -webkit-text-size-adjust: 100%;
+                     text-align: center;
+                     position: relative;
+                     top: 45px;
+                     left: -49px;
+                     color: #FFFF; font-family: 'Montserrat', sans-serif">Perfer language</h4>
+                <h4 style=" color: rgba(42, 215, 127, 1); font-family: 'Montserrat', sans-serif ">Java</h4>
+            </div>
+        </aside>
         <section>
-            <div></div>
-            <div></div>
-            <aside>
-                <div></div>
-                <div>
-                   
-                </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </aside>
-            <section>
-                <hgroup>
-                    <h5>heading</h5>
-                </hgroup>
-                <article>
-                    <p>Hello I'm Oshanda Banuka.In 2021,<br> I started my career as a software <br> engineer. I've been
-                        creating, <br> programming, and running <br> websites for the most of the last <br> few years. I
-                        now possess the <br> abilities and information required <br> to finish your project
-                        successfully. <br> Every stage of the design process, <br> including the discussion and <br>
-                        teamwork, is enjoyable to me.</p>
-                    <ul>
-                        <li>Name : Oshanda Banuka</li>
-                        <li>Age : 21 years Old<time datetime="2002-05-01"></time></li>
-                        <li>Contact : +94764231787</li>
-                        <li>Email : oshanda893@gmail.com</li>
-                        <li>Education : undergratuated(<abbr title="Institute Of Software Engineering">IJSE</abbr>)</li>
+            <hgroup>
+                <h3>Let me Introduce my Self</h3>
+                <h1>About Me</h1>
+            </hgroup>
+            <article>
+                <p>Hello I'm Oshanda Banuka.In 2021,<br> I started my career as a software <br> engineer. I've been
+                    creating, <br> programming, and running <br> websites for the most of the last <br> few years. I
+                    now possess the <br> abilities and information required <br> to finish your project
+                    successfully. <br> Every stage of the design process, <br> including the discussion and <br>
+                    teamwork, is enjoyable to me.</p>
+                <ul>
+                    <li><span>Name</span> : Oshanda Banuka</li>
+                    <li><span>Age</span> : 21 years Old
+                        <time datetime="2002-05-01"></time>
+                    </li>
+                    <li><span>Contact</span> : +94764231787</li>
+                    <li><span>Email</span> : oshanda893@gmail.com</li>
+                    <li><span>Education</span> : undergratuated(<abbr
+                            title="Institute Of Software Engineering">IJSE</abbr>)
+                    </li>
+                    <li><span>Freelancer</span> : Avaliable</li>
 
-                    </ul>
-                </article>
+                </ul>
+            </article>
+            <button>
                 <a href="Professional CV Resume.pdf" download="download_cv">Download CV</a>
-            </section>
+            </button>
+
         </section>
+    </section>
 
 
-
-
+    <section>
+        <hgroup>
+            <h4>heading</h4>
+        </hgroup>
         <section>
-            <hgroup>
-                <h4>heading</h4>
-            </hgroup>
-            <section>
-                <div>
-                    <div><img width="90px" src="assets/resourses/images/icons8-laptop-coding-64.png" alt=""></div>
-                    <h3>Desktop Application</h3>
-                    <p>create modern desktop application with awesome
-                        ideas</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="90px" src="assets/resourses/images/icons8-web-development-50.png" alt="">
-                    </div>
-                    <h3> Web Application</h3>
-                    <p>With a distinctive and performance-driven website, you can spread the word about your company to
-                        the entire world.</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="90px" src="assets/resourses/images/icons8-illustrator-50.png" alt="">
-                    </div>
-                    <h3> UI/UX Designing</h3>
-                    <p>create to the ui/ux part of the software with eyeCatching colors and modern things</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="90px" src="assets/resourses/images/icons8-illustrator-50.png" alt="">
-                    </div>
-                    <h3>Graphic Designing</h3>
-                    <p>The artwork can be completely altered by the best designer. In this industry, graphic designers
-                        are akin to magicians, in my opinion.</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="90px" src="assets/resourses/images/icons8-iot-sensor-50.png" alt="">
-                    </div>
-                    <h3>IOT and Mobile Application </h3>
-                    <p>Discover the Next Generation of the human world.</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="90px" src="assets/resourses/images/icons8-upwork-50.png" alt="">
-                    </div>
-                    <h3> Freelancing</h3>
-                    <p>Discover the Next Carrier Move. Find worldwide Job Opportunities..</p>
-                </div>
-            </section>
-
-        </section>
-
-
-
-
-
-        <section>
-            <hgroup>
-                <h4>heading</h4>
-            </hgroup>
-            <section>
-                <div>
-                    <div>
-                        <img width="50px" src="assets/resourses/images/ijse.png" alt="">
-                    </div>
-                    <p>
-                        Institute of Java Software Engineering(<abbr
-                            title="Graduate Diploma in Software Engineering">GDSE</abbr>)
-                        2021 - 2023</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="50px" src="assets/resourses/images/icons8-graduation-cap-50.png" alt="">
-                    </div>
-                    <p>Graduate Degree in Software Engineering
-                        2023 - 2024</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="50px" src="assets/resourses/images/icons8-test-50.png" alt="">
-                    </div>
-                    <p><abbr title="General Certificate Of Education">G.C.E</abbr> Advanced Level Examination
-                        Telijjawila Central College, Matara
-                        2018 - 2021</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="50px" src="assets/resourses/images/icons8-test-results-50.png" alt="">
-                    </div>
-                    <p><abbr title="General Certificate Of Education">G.C.E</abbr> Ordinary Level Examination
-                        Telijjawila Central College, Matara
-                        2013- 2018</p>
-                </div>
-                <div>
-                    <div>
-                        <img width="50px" src="assets/resourses/images/Code Zen.png" alt="">
-                    </div>
-                    <p>Software Engineer At CodeZen
-                        IT Solutions
-                        2022</p>
-                </div>
-            </section>
-
-        </section>
-
-
-
-        <section>
-            <hgroup>
-                <h4>heading</h4>
-            </hgroup>
-            <section>
-                <div><img width="96px" src="assets/resourses/images/css-3.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/html.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/java.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/js.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/node-js.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/mysql.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/photoshop.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/figma.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/after-effects.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/premiere-pro.png" alt=""></div>
-                <div><img width="96px" src="assets/resourses/images/unity (1).png" alt=""></div>
-            </section>
-        </section>
-
-
-
-
-        <section>
-            <h1></h1>
-            <section>
-                <div>
-                    <a href="All">All</a>
-                </div>
-                <div>
-                    <a href="Desktop">Desktop</a>
-                </div>
-                <div>
-                    <a href="Web">Web</a>
-                </div>
-                <div>
-                    <a href="UI/UX">UI/UX</a>
-                </div>
-            </section>
-            <section>
-                <div>
-                    <img width="200px" src="assets/resourses/images/website.png" alt="">
-                </div>
-                <div>
-                    <img width="300px" src="assets/resourses/images/melody.jpg" alt="">
-                </div>
-                <div>
-                    <img width="200px" src="assets/resourses/images/delivery.png" alt="">
-                </div>
-            </section>
-            <section>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-        </section>
-
-
-        <section>
-            <h1></h1>
-            <section>
-                <div><img width="200px" src="assets/resourses/images/html (1).png" alt=""></div>
-                <div><img width="300px" src="assets/resourses/images/java (3).png" alt=""></div>
-                <div><img width="200px" src="assets/resourses/images/js-file.png" alt=""></div>
-            </section>
-            <section>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-        </section>
-
-        <section>
-            <h1></h1>
-            <section>
-
-                <div><img width="200px" src="assets/resourses/images/Screenshot from 2023-06-21 22-16-41.png" alt="">
-                </div>
-                <div><img width="300px" src="assets/resourses/images/Screenshot from 2023-06-21 22-16-57.png" alt="">
-                </div>
-                <div><img width="200px" src="assets/resourses/images/Screenshot from 2023-06-21 22-16-41.png" alt="">
-                </div>
-
-            </section>
-            <section>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-        </section>
-
-        <section>
-            <h1></h1>
-            <section>
-                <div><img src="assets/resourses/images/photo_2023-05-20_14-40-09.jpg" alt=""></div>
-                <div>
-                    <img src="assets/resourses/images/photo_2023-06-28_23-21-17.jpg" alt="">
-                </div>
-                <div>
-                    <img src="assets/resourses/images/photo_2022-04-29_18-54-19.jpg" alt="">
-                </div>
-                <div>
-                    <img src="assets/resourses/images/photo_2022-03-03_14-32-59.jpg" alt="">
-                </div>
-                <div>
-                    <img src="assets/resourses/images/346910282_832050591683008_6596405802267507420_n.jpg" alt="">
-                </div>
-                <div></div>
-            </section>
-        </section>
-
-        <section>
-            <h1></h1>
-            <aside>
-                <form action="">
-                    <fieldset style="border: none;">
-                        <legend>Drop Me a Line</legend>
-                        <br>
-                        <input id="name" type="text" placeholder="Your Name" required>
-                        <br>
-                        <br>
-                        <input id="email" type="text" placeholder="Your Email" required>
-                        <br>
-                        <br>
-                        <textarea rows="6"></textarea>
-                        <br>
-                        <br>
-                        <button type="submit">Submit</button>
-                    </fieldset>
-
-                </form>
-
-            </aside>
-            <address>
-                <div>
-                    <img src="assets/resourses/images/icons8-whatsapp-50.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/resourses/images/icons8-gmail-logo-50.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/resourses/images/icons8-location-50.png" alt="">
-                </div>
-            </address>
-        </section>
-    </main>
-
-
-    <footer>
-        <nav>
+            <div>
+                <div><img width="90px" src="assets/resourses/images/icons8-laptop-coding-64.png" alt=""></div>
+                <h3>Desktop Application</h3>
+                <p>create modern desktop application with awesome
+                    ideas</p>
+            </div>
             <div>
                 <div>
-                    <ul>
-                        <li>
-                            <a href="About">Home</a>
-                        </li>
-                        <li><a href="Service">Service</a></li>
-                        <li><a href="Skill">Skill</a></li>
-                    </ul>
+                    <img width="90px" src="assets/resourses/images/icons8-web-development-50.png" alt="">
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="Project">Project</a>
-                        </li>
-                        <li><a href="Gallery">Gallery</a></li>
-                        <li><a href="Privacy Policy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="Terms Of Service">Terms Of Service</a></li>
-                    </ul>
-
-
-                </div>
+                <h3> Web Application</h3>
+                <p>With a distinctive and performance-driven website, you can spread the word about your company to
+                    the entire world.</p>
             </div>
-        </nav>
+            <div>
+                <div>
+                    <img width="90px" src="assets/resourses/images/icons8-illustrator-50.png" alt="">
+                </div>
+                <h3> UI/UX Designing</h3>
+                <p>create to the ui/ux part of the software with eyeCatching colors and modern things</p>
+            </div>
+            <div>
+                <div>
+                    <img width="90px" src="assets/resourses/images/icons8-illustrator-50.png" alt="">
+                </div>
+                <h3>Graphic Designing</h3>
+                <p>The artwork can be completely altered by the best designer. In this industry, graphic designers
+                    are akin to magicians, in my opinion.</p>
+            </div>
+            <div>
+                <div>
+                    <img width="90px" src="assets/resourses/images/icons8-iot-sensor-50.png" alt="">
+                </div>
+                <h3>IOT and Mobile Application </h3>
+                <p>Discover the Next Generation of the human world.</p>
+            </div>
+            <div>
+                <div>
+                    <img width="90px" src="assets/resourses/images/icons8-upwork-50.png" alt="">
+                </div>
+                <h3> Freelancing</h3>
+                <p>Discover the Next Carrier Move. Find worldwide Job Opportunities..</p>
+            </div>
+        </section>
 
+    </section>
+
+
+    <section>
+        <hgroup>
+            <h4>heading</h4>
+        </hgroup>
+        <section>
+            <div>
+                <div>
+                    <img width="50px" src="assets/resourses/images/ijse.png" alt="">
+                </div>
+                <p>
+                    Institute of Java Software Engineering(<abbr
+                        title="Graduate Diploma in Software Engineering">GDSE</abbr>)
+                    2021 - 2023</p>
+            </div>
+            <div>
+                <div>
+                    <img width="50px" src="assets/resourses/images/icons8-graduation-cap-50.png" alt="">
+                </div>
+                <p>Graduate Degree in Software Engineering
+                    2023 - 2024</p>
+            </div>
+            <div>
+                <div>
+                    <img width="50px" src="assets/resourses/images/icons8-test-50.png" alt="">
+                </div>
+                <p><abbr title="General Certificate Of Education">G.C.E</abbr> Advanced Level Examination
+                    Telijjawila Central College, Matara
+                    2018 - 2021</p>
+            </div>
+            <div>
+                <div>
+                    <img width="50px" src="assets/resourses/images/icons8-test-results-50.png" alt="">
+                </div>
+                <p><abbr title="General Certificate Of Education">G.C.E</abbr> Ordinary Level Examination
+                    Telijjawila Central College, Matara
+                    2013- 2018</p>
+            </div>
+            <div>
+                <div>
+                    <img width="50px" src="assets/resourses/images/Code Zen.png" alt="">
+                </div>
+                <p>Software Engineer At CodeZen
+                    IT Solutions
+                    2022</p>
+            </div>
+        </section>
+
+    </section>
+
+
+    <section>
+        <hgroup>
+            <h4>heading</h4>
+        </hgroup>
+        <section>
+            <div><img width="96px" src="assets/resourses/images/css-3.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/html.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/java.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/js.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/node-js.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/mysql.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/photoshop.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/figma.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/after-effects.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/premiere-pro.png" alt=""></div>
+            <div><img width="96px" src="assets/resourses/images/unity (1).png" alt=""></div>
+        </section>
+    </section>
+
+
+    <section>
+        <h1></h1>
+        <section>
+            <div>
+                <a href="All">All</a>
+            </div>
+            <div>
+                <a href="Desktop">Desktop</a>
+            </div>
+            <div>
+                <a href="Web">Web</a>
+            </div>
+            <div>
+                <a href="UI/UX">UI/UX</a>
+            </div>
+        </section>
+        <section>
+            <div>
+                <img width="200px" src="assets/resourses/images/website.png" alt="">
+            </div>
+            <div>
+                <img width="300px" src="assets/resourses/images/melody.jpg" alt="">
+            </div>
+            <div>
+                <img width="200px" src="assets/resourses/images/delivery.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+
+
+    <section>
+        <h1></h1>
+        <section>
+            <div><img width="200px" src="assets/resourses/images/html (1).png" alt=""></div>
+            <div><img width="300px" src="assets/resourses/images/java (3).png" alt=""></div>
+            <div><img width="200px" src="assets/resourses/images/js-file.png" alt=""></div>
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+
+    <section>
+        <h1></h1>
+        <section>
+
+            <div><img width="200px" src="assets/resourses/images/Screenshot from 2023-06-21 22-16-41.png" alt="">
+            </div>
+            <div><img width="300px" src="assets/resourses/images/Screenshot from 2023-06-21 22-16-57.png" alt="">
+            </div>
+            <div><img width="200px" src="assets/resourses/images/Screenshot from 2023-06-21 22-16-41.png" alt="">
+            </div>
+
+        </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+
+    <section>
+        <h1></h1>
+        <section>
+            <div><img src="assets/resourses/images/photo_2023-05-20_14-40-09.jpg" alt=""></div>
+            <div>
+                <img src="assets/resourses/images/photo_2023-06-28_23-21-17.jpg" alt="">
+            </div>
+            <div>
+                <img src="assets/resourses/images/photo_2022-04-29_18-54-19.jpg" alt="">
+            </div>
+            <div>
+                <img src="assets/resourses/images/photo_2022-03-03_14-32-59.jpg" alt="">
+            </div>
+            <div>
+                <img src="assets/resourses/images/346910282_832050591683008_6596405802267507420_n.jpg" alt="">
+            </div>
+            <div></div>
+        </section>
+    </section>
+
+    <section>
+        <h1></h1>
+        <aside>
+            <form action="">
+                <fieldset style="border: none;">
+                    <legend>Drop Me a Line</legend>
+                    <br>
+                    <input id="name" type="text" placeholder="Your Name" required>
+                    <br>
+                    <br>
+                    <input id="email" type="text" placeholder="Your Email" required>
+                    <br>
+                    <br>
+                    <textarea rows="6"></textarea>
+                    <br>
+                    <br>
+                    <button type="submit">Submit</button>
+                </fieldset>
+
+            </form>
+
+        </aside>
+        <address>
+            <div>
+                <img src="assets/resourses/images/icons8-whatsapp-50.png" alt="">
+            </div>
+            <div>
+                <img src="assets/resourses/images/icons8-gmail-logo-50.png" alt="">
+            </div>
+            <div>
+                <img src="assets/resourses/images/icons8-location-50.png" alt="">
+            </div>
+        </address>
+    </section>
+</main>
+
+
+<footer>
+    <nav>
         <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="About">Home</a>
+                    </li>
+                    <li><a href="Service">Service</a></li>
+                    <li><a href="Skill">Skill</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="Project">Project</a>
+                    </li>
+                    <li><a href="Gallery">Gallery</a></li>
+                    <li><a href="Privacy Policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="Terms Of Service">Terms Of Service</a></li>
+                </ul>
+
+
+            </div>
         </div>
-        <p> <cite>Designed and developed by Oshanda Banuka.</cite><br>
-            <small>Copyright &copy; 2023 - Oshanda Banuka All Rights Reserved.</small>
-        </p>
-    </footer>
+    </nav>
+
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p><cite>Designed and developed by Oshanda Banuka.</cite><br>
+        <small>Copyright &copy; 2023 - Oshanda Banuka All Rights Reserved.</small>
+    </p>
+</footer>
 
 </body>
 
