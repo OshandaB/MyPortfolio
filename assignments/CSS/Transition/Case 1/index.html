@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+
     <title>Document</title>
+
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <style>
+
+        div{
+            position: relative;
+            text-decoration: none;
+            width: 150px;
+            height: 40px;
+            left: -115px;
+            background: purple;
+            margin-top: 50px;
+            box-shadow: 3px 6px 5px 3px purple;
+        }
+        div:hover{
+            color: white;
+            transition-duration: 3s;
+
+           position: relative;
+            left: 0;
+
+        }
+        div>i{
+            color: white;
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        div>h4{
+            color: white;
+            width: max-content;
+            height: max-content;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
-    
+    <div>
+        <h4> Menu One </h4>
+        <i class="fa-solid fa-house"></i>
+    </div>
+    <div>
+        <h4>Menu Two</h4>
+        <i class="fa-solid fa-user"></i>
+    </div>
+    <div>
+        <h4>Menu Three</h4>
+        <i class="fa-solid fa-file-invoice"></i>
+    </div>
+    <div>
+        <h4>Menu Four</h4>
+        <i class="fa-solid fa-bug"></i>
+    </div>
+    <div>
+        <h4>Menu Five</h4>
+        <i class="fa-solid fa-flag"></i>
+    </div>
 </body>
 </html>
