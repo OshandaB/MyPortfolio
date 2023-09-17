@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-  <style>
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+
+    <style>
     body{
       background: #5DB6FF;
     }
-    div{
+    body>div:nth-child(1){
         width: 500px;
         height: 500px;
         position: absolute;
@@ -22,10 +24,46 @@
 
         box-shadow: 1px 4px 5px 0px #1a1616;
         border: 3px solid #FFFF;
+        z-index: 3;
 
     }
-    div:hover{
+    div>div:nth-child(2){
+        position: absolute;
+
+        bottom: 0;
+
+        margin: auto;
+        height: 0;
+
+        width: 500px;
         transition-duration: 2s;
+    }
+    div>div:nth-child(3){
+        position: absolute;
+        top: -1017px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        transition-duration: 2s;
+        z-index: 3;
+
+    }
+    body>div:nth-child(1):hover div:nth-child(2) {
+        transition-duration: 2s;
+        transition-property: height;
+         background: black;
+        height: 500px;
+        opacity: 60%;
+        z-index: 2;
+
+
+    }
+    body>div:nth-child(1):hover div:nth-child(3){
+        transition-duration: 2s;
+        top: 0px;
 
     }
       </style>
@@ -33,6 +71,11 @@
 <body>
 <div>
 
-    <img src="assests/fiat-500-4322521_1280.jpg" height="500" width="500"/></div>
+    <img src="assests/fiat-500-4322521_1280.jpg" height="500" width="500"/>
+    <div></div>
+      <div>
+         <a href=""><img src="assests/icons8-delete-96.png" height="96" width="96"/></a>
+          </div>
+</div>
 </body>
 </html>
