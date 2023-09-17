@@ -23,6 +23,7 @@
     <style>
         * {
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         ::-webkit-scrollbar {
@@ -182,7 +183,15 @@
             background: rgba(43, 217, 132, 1);
             z-index: 2;
         }
-
+        main > section:nth-child(1) > aside>section {
+            position: absolute;
+            right: 40px;
+           display: flex;
+            flex-direction: column;
+        }
+        main > section:nth-child(1) > aside>section>div>a>h1 {
+           margin-bottom: 0;
+        }
         main > section:nth-child(1) > section {
             width: 82.76%;
             height: 100%;
@@ -695,8 +704,26 @@ display: flex;
             right: 0;
             height: 25%;
         }
+        main > section:nth-child(6) > div:nth-child(5) {
+            position: absolute;
+            left: 55px;
+            top: 250px;
+
+        }
+        main > section:nth-child(6) > div:nth-child(6) {
+
+            position: absolute;
+            right: 80px;
+            top: 250px;
 
 
+        }
+        main > section:nth-child(6) > div>a>h1 {
+
+           font-size: 70px;
+            color:  rgba(43, 217, 132, 1);
+
+        }
         /*    Assignments*/
         main > section:nth-child(7) {
             position: relative;
@@ -754,6 +781,26 @@ display: flex;
             right: 0;
             height: 25%;
         }
+        main > section:nth-child(7) > div:nth-child(4) {
+            position: absolute;
+            left: 55px;
+            top: 250px;
+
+        }
+        main > section:nth-child(7) > div:nth-child(5) {
+
+            position: absolute;
+            right: 80px;
+            top: 250px;
+
+
+        }
+        main > section:nth-child(7) > div>a>h1 {
+
+            font-size: 70px;
+            color:  rgba(43, 217, 132, 1);
+
+        }
         /*certificates*/
         main > section:nth-child(8) {
             position: relative;
@@ -786,6 +833,26 @@ display: flex;
             left: 65px;
             right: 0;
             margin: auto;
+
+        }
+        main > section:nth-child(8) > div:nth-child(4) {
+            position: absolute;
+            left: 55px;
+            top: 250px;
+
+        }
+        main > section:nth-child(8) > div:nth-child(5) {
+
+            position: absolute;
+            right: 80px;
+            top: 250px;
+
+
+        }
+        main > section:nth-child(8) > div>a>h1 {
+
+            font-size: 70px;
+            color:  rgba(43, 217, 132, 1);
 
         }
         main > section:nth-child(8) > section:nth-child(3)>div {
@@ -1160,14 +1227,14 @@ margin-top: 5px;
     <nav>
         <menu>
             <li>
-                <a href="Home">Home</a>
+                <a href="#Home">Home</a>
             </li>
-            <li><a href="About">About</a></li>
-            <li><a href="Service">Service</a></li>
-            <li><a href="Skill">Skill</a></li>
-            <li><a href="Project">Project</a></li>
-            <li><a href="Gallery">Gallery</a></li>
-            <li><a href="Contact">Contact</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Service">Service</a></li>
+            <li><a href="#Skill">Skill</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#Contact">Contact</a></li>
             <li><a href="Professional CV Resume.pdf" download="download_cv">Download CV</a></li>
         </menu>
 
@@ -1178,7 +1245,7 @@ margin-top: 5px;
 <main>
     <section>
 
-        <section>
+        <section id="Home">
             <hgroup>
                 <h4>HELLO,I'M</h4>
                 <h1>Oshanda <span>Banuka</span></h1>
@@ -1198,16 +1265,29 @@ margin-top: 5px;
         </div>
 
         <aside>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <section>
+                <div>
+                    <a href=""><h1><i class="fa-brands fa-github" style="color: #000000;"></i></h1></a>
+                </div>
+                <div>
+                    <a href=""><h1><i class="fa-brands fa-linkedin" style="color: #000000;"></i></h1></a>
+                </div>
+                <div>
+                    <a href=""><h1><i class="fa-brands fa-facebook" style="color: #000000;"></i></h1></a>
+                </div>
+                <div>
+                    <a href=""><h1><i class="fa-brands fa-stack-overflow" style="color: #000000;"></i></h1></a>
+                </div>
+                <div>
+                    <a href=""><h1><i class="fa-brands fa-hackerrank" style="color: #000000;"></i></h1></a>
+                </div>
+            </section>
+
         </aside>
     </section>
 
 
-    <section>
+    <section id="About">
 
         <aside>
             <div></div>
@@ -1281,7 +1361,7 @@ margin-top: 5px;
     </section>
 
 
-    <section>
+    <section id="Service">
         <hgroup>
             <h4>WHAT I WILL DO<br>
                 FOR YOU</h4>
@@ -1338,7 +1418,7 @@ margin-top: 5px;
     </section>
 
 
-    <section>
+    <section id="Skill">
         <hgroup>
             <h4>Skills</h4>
     <h1>My Resume</h1>
@@ -1516,7 +1596,7 @@ margin-top: 5px;
     </section>
 
 
-    <section>
+    <section >
         <hgroup>
             <h4>Languages and FrameWorks</h4>
             <h1>What I Learnt</h1>
@@ -1537,7 +1617,7 @@ margin-top: 5px;
     </section>
 
 
-    <section>
+    <section id="Project">
         <h1>Project</h1>
         <section>
             <div>
@@ -1569,6 +1649,18 @@ margin-top: 5px;
             <div></div>
             <div></div>
         </section>
+
+        <div>
+            <a href="#next"> <h1>
+                <i class="fa-solid fa-chevron-left fa-lg"></i>
+            </h1></a>
+
+
+        </div>
+        <div>
+            <a href="#previous"> <h1><i class="fa-solid fa-chevron-right fa-lg"></i></h1></a>
+
+        </div>
     </section>
 
 
@@ -1584,6 +1676,17 @@ margin-top: 5px;
             <div></div>
             <div></div>
         </section>
+        <div>
+            <a href="#next"> <h1>
+                <i class="fa-solid fa-chevron-left fa-lg"></i>
+            </h1></a>
+
+
+        </div>
+        <div>
+            <a href="#previous"> <h1><i class="fa-solid fa-chevron-right fa-lg"></i></h1></a>
+
+        </div>
     </section>
 
     <section>
@@ -1603,9 +1706,20 @@ margin-top: 5px;
             <div></div>
             <div></div>
         </section>
+        <div>
+            <a href="#next"> <h1>
+                <i class="fa-solid fa-chevron-left fa-lg"></i>
+            </h1></a>
+
+
+        </div>
+        <div>
+            <a href="#previous"> <h1><i class="fa-solid fa-chevron-right fa-lg"></i></h1></a>
+
+        </div>
     </section>
 
-    <section>
+    <section id="Gallery">
         <h1>Gallery</h1>
         <section>
             <div></div>
@@ -1643,7 +1757,7 @@ margin-top: 5px;
         </section>
     </section>
 
-        <section>
+        <section id="Contact">
             <hgroup>
                 <h4>Have You Any Question?</h4>
                 <h1>Contact Me</h1>
