@@ -137,6 +137,13 @@
             background: rgba(43, 217, 132, 1);
             z-index: 1;
         }
+        header > div:last-child > div {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 25px;
+            display:none ;
+        }
 
         header > nav > menu {
             position: relative;
@@ -735,10 +742,31 @@
             left: 65px;
             right: 0;
             margin: auto;
+            gap: 20px;
 
 
         }
+        main > section:nth-child(6) > section:nth-child(3) >div {
+            position: relative;
+            width: 500px;
+            height: 274px;
+            border-radius: 30px;
+            background: #20272f;
+            box-shadow: inset 32px 32px 63px #161b20,
+            inset -32px -32px 63px #2a333e;
 
+
+        }
+        main > section:nth-child(6) > section:nth-child(3) >div>img {
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto ;
+
+        }
         main > section:nth-child(6) > section:nth-child(4) > div {
 
             border-radius: 100%;
@@ -819,9 +847,30 @@
             left: 65px;
             right: 0;
             margin: auto;
+            gap: 20px;
 
         }
+        main > section:nth-child(7) > section:nth-child(2) >div {
+            position: relative;
+            width: 500px;
+            height: 274px;
+            border-radius: 30px;
+            background: #20272f;
+            box-shadow: inset 32px 32px 63px #161b20,
+            inset -32px -32px 63px #2a333e;
 
+
+        }
+        main > section:nth-child(7) > section:nth-child(2) >div>img {
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto ;
+
+        }
         main > section:nth-child(7) > section:nth-child(3) > div {
 
             border-radius: 100%;
@@ -903,9 +952,30 @@
             left: 65px;
             right: 0;
             margin: auto;
+            gap: 20px;
 
         }
+        main > section:nth-child(8) > section:nth-child(2) >div {
+            position: relative;
+            width: 500px;
+            height: 274px;
+            border-radius: 30px;
+            background: #20272f;
+            box-shadow: inset 32px 32px 63px #161b20,
+            inset -32px -32px 63px #2a333e;
 
+
+        }
+        main > section:nth-child(8) > section:nth-child(2) >div>img {
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto ;
+
+        }
         main > section:nth-child(8) > div:nth-child(4) {
             position: absolute;
             left: 55px;
@@ -1348,6 +1418,7 @@
                 top: 20px;
                 right: 20px;
                 font-size: 25px;
+                display:block ;
             }
 
             header > div > img:first-child {
@@ -1776,7 +1847,9 @@
             }
 
             main > section:nth-child(6) {
-
+                position: relative;
+                background: rgba(32, 39, 47, 1);
+                height: 150vh;
             }
 
             main > section:nth-child(6) > h1 {
@@ -1797,19 +1870,26 @@
 
             main > section:nth-child(6) > section:nth-child(3) {
                 display: flex;
-                width: 75%;
+                width: 33%;
 
                 align-items: center;
                 justify-content: space-between;
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                left: 65px;
+                left: 0;
                 right: 0;
                 margin: auto;
                 flex-direction: column;
             }
-
+            main > section:nth-child(6) > section:nth-child(3) >div {
+                position: relative;
+                width: 187px;
+                height: 125px;
+                border-radius: 30px;
+                background: #20272f;
+                box-shadow: inset 32px 32px 63px #161b20, inset -32px -32px 63px #2a333e;
+            }
             main > section:nth-child(6) > div:nth-child(6) {
                 display: none;
                 position: absolute;
@@ -1831,10 +1911,13 @@
                 background: rgba(43, 217, 132, 1);
                 display: none;
             }
+            main > section:nth-child(6) > section:nth-child(3) > div>img{
+               width: 62%;
+            }
 
             main > section:nth-child(7) {
                 position: relative;
-                height: 120vh;
+                height: 150vh;
                 background-color: rgba(23, 28, 34, 1);
             }
 
@@ -1874,22 +1957,30 @@
 
             main > section:nth-child(7) > section:nth-child(2) {
                 display: flex;
-                width: 86vw;
-                height: 50vw;
+                width: 69%;
+                height: 459px;
+                /* height: 50vw; */
                 align-items: center;
                 justify-content: space-between;
                 position: absolute;
                 top: 0;
-                bottom: 221px;
-                left: 32px;
+                bottom: 0;
+                left: 0;
                 right: 0;
                 margin: auto;
                 flex-direction: column;
             }
-
+            main > section:nth-child(7) > section:nth-child(2) >div {
+                position: relative;
+                width: 187px;
+                height: 125px;
+                border-radius: 30px;
+                background: #20272f;
+                box-shadow: inset 32px 32px 63px #161b20, inset -32px -32px 63px #2a333e;
+            }
             main > section:nth-child(7) > section:nth-child(2) > div > img {
-                width: 50%;
-                margin-left: 42px;
+                width: 42%;
+                /* margin-left: 88px; */
             }
 
             main > section:nth-child(8) {
@@ -1934,17 +2025,30 @@
 
             main > section:nth-child(8) > section:nth-child(2) {
                 display: flex;
-                width: 80vw;
-                height: 50vw;
+                width: 69%;
+                height: 459px;
+                /* height: 50vw; */
                 align-items: center;
                 justify-content: space-between;
                 position: absolute;
                 top: 0;
-                bottom: 250px;
-                left: 50px;
+                bottom: 0;
+                left: 0;
                 right: 0;
                 margin: auto;
                 flex-direction: column;
+            }
+            main > section:nth-child(8) > section:nth-child(2) >div {
+                position: relative;
+                width: 187px;
+                height: 125px;
+                border-radius: 30px;
+                background: #20272f;
+                box-shadow: inset 32px 32px 63px #161b20, inset -32px -32px 63px #2a333e;
+            }
+            main > section:nth-child(8) > section:nth-child(2) > div > img {
+                width: 42%;
+                /* margin-left: 88px; */
             }
 
             main > section:nth-child(9) {
@@ -2209,10 +2313,16 @@
 
                 </ul>
             </article>
-            <button>
-                <a href="Professional CV Resume.pdf" download="download_cv">Download CV</a>
+<!--            <button>-->
+<!--                <a href="Professional CV Resume.pdf" download="download_cv">Download CV</a>-->
+<!--            </button>-->
+            <button class="cursor-pointer group relative flex gap-1.5 px-8 py-4 bg-black bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24px" width="24px"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <g id="Interface / Download"> <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#f1f1f1" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" id="Vector"></path> </g> </g></svg>
+                Download
+                <div class="absolute opacity-0 -bottom-full rounded-md py-2 px-2 bg-black bg-opacity-70 left-1/2 -translate-x-1/2 group-hover:opacity-100 transition-opacity shadow-lg">
+                    Download
+                </div>
             </button>
-
         </section>
     </section>
 
