@@ -1933,8 +1933,13 @@ content: "";
 
                 flex-direction: column-reverse;
             }
-            footer{
-
+            footer {
+                position: relative;
+                border-top: 3px solid black;
+                border-top-width: medium;
+                width: 100%;
+                height: 42vh;
+                background: rgba(23, 28, 34, 1);
             }
             footer > nav > div > div:nth-child(1) > ul > li > a {
                 text-decoration: none;
@@ -1963,13 +1968,19 @@ content: "";
                 font-family: 'Montserrat', sans-serif;
                 font-weight: bold;
                 text-align: center;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+
             }
             footer > div {
-                width: 164px;
+                width: 125px;
                 display: flex;
                 position: absolute;
                 top: 138px;
-                right: 73px;
+                right: 12px;
                 font-size: 8px;
             }
 
