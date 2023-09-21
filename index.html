@@ -916,14 +916,11 @@
             height: 274px;
             border-radius: 30px;
             background: #20272f;
-            box-shadow: inset 32px 32px 63px #161b20,
-            inset -32px -32px 63px #2a333e;
-
-
+            box-shadow: inset 2px 2px 63px 0px #494f57, inset -32px -32px 63px #2a333e;
         }
 
         main > section:nth-child(7) > section:nth-child(2) > div > img {
-
+width: 205px;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -1495,13 +1492,29 @@
             header > div:nth-child(1) > div:nth-child(2) > hgroup {
                 margin-top: -2px;
             }
-
+            header > div:nth-child(3) {
+                width: 64px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: rgba(43, 217, 132, 1);
+                z-index: 1;
+            }
             main > section:nth-child(1) > section > hgroup > h4 {
                 font-size: 13px;
                 font-family: 'Montserrat', sans-serif;
                 color: rgba(255, 255, 255, 1);
             }
-
+            main > section:nth-child(1) > aside {
+                width: 64px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: rgba(43, 217, 132, 1);
+                z-index: 2;
+            }
             main > section:nth-child(1) > section > hgroup > h1 {
                 line-height: 1.15;
                 -webkit-text-size-adjust: 100%;
@@ -1586,7 +1599,7 @@
             main > section:nth-child(1) {
                 position: relative;
                 margin-top: 100px;
-                height: 100vh;
+                height: 100px;
                 /* height: 85vh; */
                 background: rgba(23, 28, 34, 1);
                 box-sizing: border-box;
@@ -1650,11 +1663,7 @@
 
             }
 
-            main > #About > section {
-                position: absolute;
-                top: 222px;
-                right: 56px;
-            }
+
 
             main > #About > section > article {
                 font-size: 46%;
@@ -1664,8 +1673,8 @@
 
             main > #About > section {
                 position: absolute;
-                top: 233px;
-                right: 71px;
+                top: 315px;
+                right: 77px;
             }
 
             main > #About > section > hgroup > h3 {
