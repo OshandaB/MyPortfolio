@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        div{
+  font-size: 0;
+            display: flex;
+            width: max-content;
+           
+            display: inline-block;
+            /*background: red;*/
+  animation-direction: alternate;
+            animation-name: anima;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            /*z-index: 3;*/
+        }
+
+        div>img{
+            height: 102vh;
+            width: 100vw;
+        }
+        @keyframes anima {
+            0%{
+margin-left: 0;
+            }
+            25%{
+margin-left: -100vw;
+            }
+            50%{
+                margin-left: -200vw;
+            }
+            75%{
+                margin-left: -300vw;
+            }
+            100%{
+                margin-left: -400vw;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+</head>
+<body>
+ <div>
+
+
+     <img src="pexels-bychlo-18077629.jpg" />
+     <img src="pexels-eberhard-grossgasteiger-1612351.jpg" />
+     <img src="pexels-irina-iriser-1379636.jpg" />
+     <img src="pexels-eberhard-grossgasteiger-1612351.jpg" />
+     <img src="pexels-eberhard-grossgasteiger-1612351.jpg" />
+ </div>
+
+
+</body>
+
+
+</html>
