@@ -82,9 +82,19 @@
             transition: width .6s;
         }
 
+        header > nav > menu > li:hover > a:first-child:after {
+            content: "";
+            display: block;
+            width: 43%;
+            height: 5px;
+            background-color: rgba(7, 193, 144, 1);
+            border-radius: 20%;
+            transition: width .6s;
+        }
+
         header > nav > menu > li > a:hover ::after {
 
-            width: 43%;
+            width: 100%;
             transition: width .6s;
         }
 
@@ -160,7 +170,7 @@
         main > section:nth-child(1) {
             position: relative;
             margin-top: 100px;
-    min-height: 100vh;
+    min-height: 525px;
 
             background: rgba(23, 28, 34, 1);
             box-sizing: border-box;
@@ -369,8 +379,8 @@
             background: rgba(43, 217, 132, 1);
             border: 5px solid black;
             border-radius: 20px;
-            width: 20%;
-            height: 50%;
+            width: 223px;
+            height: 344px;
             margin-top: 80px;
             margin-left: 50px;
         }
