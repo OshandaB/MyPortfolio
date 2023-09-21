@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  <style>
+    div{
+      animation-name: anima;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      width: 200px;
+      height: 100px;
+      border-radius: 10px;
+      animation-direction: alternate;
+      background: yellow;
+      position: relative;
+      top: 0;
+      left: 0;
+
+    }
+    @keyframes anima {
+         0%{
+           background: black;
+           transform: rotate(0deg);
+      left: 0;
+           top: 0;
+         }
+
+      25%{
+        background: red;
+        transform: rotate(90deg);
+        left: 1100px;
+        top: 0;
+      }
+
+
+
+
+      50%{
+        background: green;
+        transform: rotate(180deg);
+        left: 1100px;
+        top: 500px;
+
+      }
+      75%{
+        background: purple;
+        transform: rotate(270deg);
+        left: 0px;
+        top: 500px;
+
+      }
+      100%{
+        background: orange;
+        transform: rotate(360deg);
+        left: 0;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
