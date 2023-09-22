@@ -73,34 +73,41 @@
         }
 
         header > nav > menu > li > a:first-child:after {
+
             content: "";
             display: block;
             width: 43%;
             height: 5px;
-            background-color: rgba(7, 193, 144, 1);
+            /*background-color: rgba(7, 193, 144, 1);*/
             border-radius: 20%;
-            transition: width .6s;
+            transition: width .3s;
+
         }
 
         header > nav > menu > li:hover > a:first-child:after {
+            display: block;
             content: "";
             display: block;
-            width: 43%;
+            width: 100%;
             height: 5px;
             background-color: rgba(7, 193, 144, 1);
             border-radius: 20%;
-            transition: width .6s;
+            transition: width .3s;
+            transition-duration: 2s;
         }
 
         header > nav > menu > li > a:hover ::after {
 
             width: 100%;
-            transition: width .6s;
+            transition: width .3s;
         }
 
         header > nav > menu > li:last-child {
             position: relative;
             left: 33px;
+        }
+        header > nav > menu > li:last-child>a {
+            color: black;
         }
 
         header > div > div:nth-child(2) {
@@ -178,7 +185,7 @@
         main > section:nth-child(1) {
             position: relative;
             margin-top: 100px;
-    min-height: 600px;
+    min-height: 662px;
 
             background: rgba(23, 28, 34, 1);
             box-sizing: border-box;
@@ -188,7 +195,7 @@
 
         main > section:nth-child(1) > div:nth-child(2) {
             width: 604px;
-            height: 513px;
+            height: 574px;
             position: absolute;
             right: 94px;
             top: 88px;
@@ -347,13 +354,13 @@
 
             font-size: 18px;
 
-            height: 100vh;
+            height: 601px;
 
         }
 
         main > #About > aside {
 
-            height: 100%;
+            height: 545px;
             width: 85%;
             position: relative;
         / / left: 100 px;
@@ -365,8 +372,8 @@
             background: url(../MyPortfolio/assets/resourses/images/about1.png);
             background-size: cover;
             background-position: center;
-            width: 53%;
-            height: 50%;
+            width:651px;
+            height: 341px;
             position: absolute;
             top: 180px;
             left: -20px;
@@ -376,8 +383,8 @@
             background: url(../MyPortfolio/assets/resourses/images/about.png);
             background-size: cover;
             background-position: center;
-            width: 53%;
-            height: 50%;
+            width: 641px;
+            height: 268px;
             position: absolute;
             top: 79px;
             left: -120px;
@@ -414,8 +421,8 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            width: 60%;
-            height: 36%;
+            width: 675px;
+            height: 236px;
             z-index: 3;
             left: -250px;
             bottom: 350px;
@@ -430,8 +437,8 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            width: 60%;
-            height: 36%;
+            width: 675px;
+            height: 236px;
             z-index: 3;
             left: -85px;
             bottom: 360px;
@@ -446,8 +453,8 @@
             background-size: cover;
             background-position: center;
             position: relative;
-            width: 65%;
-            height: 36%;
+            width: 746px;
+            height: 231px;
             z-index: 3;
             left: 90px;
             bottom: 850px;
@@ -598,7 +605,7 @@
         main > section:nth-child(3) {
 
             position: relative;
-            height: 100vh;
+            height: 125vh;
             font-size: 18px;
             background-color: rgba(23, 28, 34, 1);
 
@@ -2471,7 +2478,13 @@ width: 205px;
                 top: -20px;
                 font-size: 48px;
             }
-
+            main > section:nth-child(1) {
+                position: relative;
+                margin-top: 100px;
+                min-height: 423px;
+                background: rgba(23, 28, 34, 1);
+                box-sizing: border-box;
+            }
             main > section:nth-child(1) > section > article > p > b {
                 line-height: 1.15;
                 -webkit-text-size-adjust: 100%;
@@ -2484,13 +2497,13 @@ width: 205px;
             }
 
             main > section:nth-child(1) > div:nth-child(2) {
-                width: 45%;
+                width: 339px;
                 position: absolute;
                 right: 74px;
-                top: 53px;
+                top: 20px;
                 /* left: 20px; */
                 z-index: 3;
-                height: 75vh;
+                height: 400px;
                 background: url(assets/resourses/images/welcome_photo.png);
                 background-size: cover;
                 background-position: center;
