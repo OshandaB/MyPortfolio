@@ -11,10 +11,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            /*background: #A8A8A8;*/
+            background: black;
+        }
 
+        ::-webkit-scrollbar-thumb {
+            background: rgba(43, 217, 132, 1);
+        }
+*{
+    font-family: 'Montserrat', sans-serif;
+}
         main {
             width: 100%;
-            height: 140vh;
+            height: 3000px;
             background: rgba(32, 39, 47, 1);
         }
 
@@ -24,7 +35,7 @@
             display: flex;
             flex-wrap: wrap;
 
-            gap: 33px;
+            gap: 88px;
             top: 227px;
             bottom: 0;
             left: 0;
@@ -33,8 +44,8 @@
         }
 
         main > section > div {
-            width: 200px;
-            height: 200px;
+            width: 493px;
+            height: 256px;
             border-radius: 30px;
             background-color: rgba(23, 28, 34, 1);
             border: 3px solid rgba(42, 215, 127, 1);
@@ -163,8 +174,11 @@ position: absolute;
             left: 0;
             right: 0;
             margin: auto;
-            width: max-content;
-            height: max-content;
+            width:300px;
+            height: 150px;
+            border-radius: 20px;
+            border: 3px solid black;
+            background: #494f57;
 
 
         }
@@ -176,8 +190,15 @@ position: absolute;
             transform: scale(0.97);
 
         }
-main>section>div>div>button{
+        main>section>div>div>h1{
 
+
+            text-align: center;
+
+        }
+main>section>div>div>button{
+position: relative;
+    left: 68px;
     color: black;
     margin-top: 13px;
     text-align: center;

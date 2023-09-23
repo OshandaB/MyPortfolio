@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation Case 02</title>
+    <link rel="stylesheet" href="../../../../assets/resourses/normalize/necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <style>
+        main{
+            width: 100%;
+            height: 100vh;
+            background: #000049;
+        }
+        main>div:nth-child(1){
+            transform: rotate(45deg);
+            width: 300px;
+            height: 300px;
+
+
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+
+        }
+        main>div:nth-child(1)>div{
+            width: 300px;
+            height: 300px;
+            background: white;
+
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 37px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            animation-name: ani;
+           animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-direction: alternate;
+           animation-timing-function: linear;
+
+        }
+        main>div:nth-child(2){
+
+            width: 300px;
+            height: 300px;
+            background: #000049;
+
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid #000049;
+
+        }
+        @keyframes ani {
+            0%{
+bottom: -169px;
+            }
+            50%{
+                bottom: 0;
+                box-shadow: 1px 0px 20px 20px white;
+
+
+            }
+            100%{
+                bottom: 169px;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div>
+        <div>
+
+        </div>
+    </div>
+    <div></div>
+</main>
+</body>
+</html>
