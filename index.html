@@ -180,14 +180,18 @@
         /* main Style */
         main > section {
             width: 100%;
+
         }
 
         main > section:nth-child(1) {
             position: relative;
             margin-top: 100px;
     min-height: 682px;
+            background: url("assets/resourses/images/background (5).svg");
 
-            background: rgba(23, 28, 34, 1);
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(23, 28, 34, 1);
             box-sizing: border-box;
 
         }
@@ -214,7 +218,8 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: rgba(43, 217, 132, 1);
+            background: url("assets/resourses/images/aside (1).svg");
+            background-color: rgba(43, 217, 132, 1);
             z-index: 2;
         }
 
@@ -350,8 +355,10 @@
             display: flex;
             justify-content: center;
             position: relative;
-            background: rgba(32, 39, 47, 1);
-
+            background: url("assets/resourses/images/about (3).svg");
+            background-color: rgba(32, 39, 47, 1);
+            background-size: cover;
+            background-position: center;
             font-size: 18px;
 
             height: 601px;
@@ -606,7 +613,10 @@
             position: relative;
             height: 125vh;
             font-size: 18px;
+            background: url("assets/resourses/images/service (1).svg");
             background-color: rgba(23, 28, 34, 1);
+            background-size: cover;
+            background-position: center;
 
         }
 
@@ -642,7 +652,11 @@
             font-size: 80%;
 
         }
-
+        main > section:nth-child(3) > section:nth-child(2)>div:hover {
+            scale: 0.95;
+            transition-property: all;
+            transition-duration: 2s;
+        }
         main > section:nth-child(3) > section:nth-child(2) > div > div {
 
             margin-top: 10px;
@@ -674,7 +688,10 @@
         /*        !*education*!*/
         main > section:nth-child(4) {
             position: relative;
-            background: rgba(32, 39, 47, 1);
+            background: url("assets/resourses/images/skills (1).svg");
+            background-color: rgba(32, 39, 47, 1);
+            background-size: cover;
+            background-position: center;
 
 
         }
@@ -702,13 +719,22 @@
             width: 100%;
             height: 130vh;
         }
+        #svg >g>rect:hover{
+           scale: 0.97;
+            transition-duration: 5s;
+            transition-property: all;
+            transition-timing-function: linear;
+
+        }
 
         /*    skills*/
         main > section:nth-child(5) {
             position: relative;
             height: 100vh;
-
+            background: url("assets/resourses/images/language (1).svg");
             background-color: rgba(23, 28, 34, 1);
+            background-size: cover;
+            background-position: center;
         }
 
         main > section:nth-child(5) > hgroup > h4 {
@@ -757,7 +783,10 @@
         /*        !*!*project*!*/
         main > section:nth-child(6) {
             position: relative;
-            background: rgba(32, 39, 47, 1);
+            background: url("assets/resourses/images/project (1).svg");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(32, 39, 47, 1);
             height: 100vh;
 
         }
@@ -842,28 +871,16 @@
 
         }
 
-        main > section:nth-child(6) > section:nth-child(4) {
-            width: 21%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: auto;
 
-            right: 0;
-            height: 25%;
-        }
 
-        main > section:nth-child(6) > div:nth-child(5) {
+        main > section:nth-child(6) > div:nth-child(4) {
             position: absolute;
             left: 55px;
             top: 250px;
 
         }
 
-        main > section:nth-child(6) > div:nth-child(6) {
+        main > section:nth-child(6) > div:nth-child(5) {
 
             position: absolute;
             right: 80px;
@@ -883,7 +900,9 @@
         main > section:nth-child(7) {
             position: relative;
             height: 100vh;
-
+            background: url("assets/resourses/images/assignments (1).svg");
+            background-size: cover;
+            background-position: center;
 
             background-color: rgba(23, 28, 34, 1);
         }
@@ -1027,7 +1046,7 @@ border-width: 0;
 
         }
         main > section:nth-child(7) > section:nth-child(2) >section> div > button:nth-child(3)>a {
-            transition: all .6s;
+
             color: white;
             text-align: center;
             font-weight: 500;
@@ -1046,19 +1065,7 @@ border-width: 0;
 
         }
 
-        main > section:nth-child(7) > section:nth-child(3) {
-            width: 21%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: auto;
 
-            right: 0;
-            height: 25%;
-        }
 
         main > section:nth-child(7) > div:nth-child(4) {
             position: absolute;
@@ -1086,9 +1093,12 @@ border-width: 0;
         /*certificates*/
         main > section:nth-child(8) {
             position: relative;
-            background: rgba(32, 39, 47, 1);
-
+            /* background-color: rgba(32, 39, 47, 1); */
+            background: url("assets/resourses/images/certificates (1).svg");
+            background-size: cover;
+            background-position: center;
             height: 100vh;
+            background-color: rgba(32, 39, 47, 1);
 
 
         }
@@ -1177,26 +1187,15 @@ border-width: 0;
 
         }
 
-        main > section:nth-child(8) > section:nth-child(3) {
-            width: 21%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-
-            right: 0;
-            height: 25%;
-        }
 
         /*    gallery*/
         main > section:nth-child(9) {
             position: relative;
             height: 100vh;
 
-
+            background: url("assets/resourses/images/gallery.svg");
+            background-size: cover;
+            background-position: center;
             background-color: rgba(23, 28, 34, 1);
         }
 
@@ -1301,9 +1300,12 @@ border-width: 0;
         /*    contact*/
         main > section:nth-child(10) {
             position: relative;
-            background: rgba(43, 217, 132, 1);
 
+            background: url("assets/resourses/images/contact (1).svg");
+            background-size: cover;
+            background-position: center;
             height: 100vh;
+            background-color: rgba(42, 215, 127, 1);
 
 
         }
@@ -1472,7 +1474,10 @@ border-width: 0;
             border-top: 3px solid black;
             border-top-width: medium;
             width: 100%;
-            background: rgba(23, 28, 34, 1);
+            background: url("assets/resourses/images/footer (1).svg");
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(23, 28, 34, 1) ;
         }
 
         footer > nav > div > div:nth-child(1) > ul {
@@ -3310,7 +3315,7 @@ border-width: 0;
             }
         }
 
-    </style>
+        </style>
 
 </head>
 
@@ -3580,7 +3585,7 @@ border-width: 0;
                 <g filter="url(#filter4_d_355_60)">
                     <rect x="515" y="1592" width="482" height="262" rx="43" fill="#171C22"/>
                 </g>
-                <rect x="418" y="261" width="215" height="65" fill="url(#pattern0)"/>
+                <rect  x="418" y="261" width="215" height="65" fill="url(#pattern0)"/>
                 <rect x="862" y="599" width="88" height="106" fill="url(#pattern1)"/>
                 <rect x="500" y="915" width="88" height="106" fill="url(#pattern2)"/>
                 <rect x="885" y="1232" width="88" height="106" fill="url(#pattern3)"/>
@@ -3778,11 +3783,7 @@ border-width: 0;
                 <img width="80%" src="assets/resourses/images/delivery.png" alt="">
             </div>
         </section>
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
-        </section>
+
 
         <div>
             <a href="#next"><h1>
