@@ -106,7 +106,8 @@
             position: relative;
             left: 33px;
         }
-        header > nav > menu > li:last-child>a {
+
+        header > nav > menu > li:last-child > a {
             color: black;
         }
 
@@ -164,6 +165,7 @@
             background: rgba(43, 217, 132, 1);
             z-index: 1;
         }
+
         header > div:last-child > div {
             position: absolute;
             top: 20px;
@@ -186,7 +188,7 @@
         main > section:nth-child(1) {
             position: relative;
             margin-top: 100px;
-    min-height: 682px;
+            min-height: 682px;
             background: url("assets/resourses/images/background (5).svg");
 
             background-size: cover;
@@ -263,7 +265,6 @@
             top: 154px;
         }
 
-       
 
         main > section:nth-child(1) > div:nth-child(3) > img {
 
@@ -337,8 +338,33 @@
 
             background: rgba(43, 217, 132, 1);;
             cursor: pointer;
-        }
+            z-index: 2;
+            border-width: 0;
 
+        }
+        main > section:nth-child(1) > section > button:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 14px;
+            right: -20px;
+            transition: 0.5s;
+
+        }
+        main > section:nth-child(1) > section > button:hover {
+            padding-right: 24px;
+            padding-left:8px;
+            color:  black;
+            transition: 1s ease-in-out;
+            background: #4F95DA;
+            stroke-dashoffset: -480;
+
+        }
+        main > section:nth-child(1) > section > button:hover:after {
+            opacity: 1;
+            right: 10px;
+
+        }
         /*!* about me *!*/
         main > #About {
             display: flex;
@@ -368,7 +394,7 @@
             background: url(../MyPortfolio/assets/resourses/images/about1.png);
             background-size: cover;
             background-position: center;
-            width:651px;
+            width: 651px;
             height: 341px;
             position: absolute;
             top: 180px;
@@ -408,6 +434,7 @@
             width: 170px;
             height: 342px;
         }
+
         main > #About > aside > div:nth-child(5) {
             line-height: 1.15;
             -webkit-text-size-adjust: 100%;
@@ -582,6 +609,7 @@
             border-radius: 15px;
             color: rgba(42, 215, 127, 1);
             box-shadow: 5px 4px 19px 0px rgb(43 217 132);
+            z-index: 2;
         }
 
         main > #About > section > button > div {
@@ -627,6 +655,7 @@
             margin: auto;
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(3, 1fr);
+            z-index: 2;
         }
 
         main > section:nth-child(3) > section:nth-child(2) > div {
@@ -641,11 +670,13 @@
             font-size: 80%;
 
         }
-        main > section:nth-child(3) > section:nth-child(2)>div:hover {
+
+        main > section:nth-child(3) > section:nth-child(2) > div:hover {
             scale: 0.95;
             transition-property: all;
             transition-duration: 2s;
         }
+
         main > section:nth-child(3) > section:nth-child(2) > div > div {
 
             margin-top: 10px;
@@ -708,8 +739,9 @@
             width: 100%;
             height: 130vh;
         }
-        #svg >g>rect:hover{
-           scale: 0.97;
+
+        #svg > g > rect:hover {
+            scale: 0.97;
             transition-duration: 5s;
             transition-property: all;
             transition-timing-function: linear;
@@ -767,6 +799,9 @@
 
         main > section:nth-child(5) > section > div {
             margin-right: 21px;
+            border-radius: 30px;
+            background: #20272f;
+            box-shadow: inset 2px 2px 63px 0px #494f57, inset -32px -32px 63px #2a333e;
         }
 
         /*        !*!*project*!*/
@@ -817,24 +852,284 @@
             align-items: center;
             justify-content: space-between;
             position: absolute;
-            top: 0;
+            top: 69px;
             bottom: 0;
-            left: 65px;
+            left: 10px;
             right: 0;
             margin: auto;
             gap: 20px;
+           z-index: 2;
 
 
         }
 
         main > section:nth-child(6) > section:nth-child(3) > div {
             position: relative;
-            width: 500px;
-            height: 274px;
+            width: 459px;
+            height: 332px;
             border-radius: 30px;
-            background: #20272f;
-            box-shadow: inset 32px 32px 63px #161b20,
-            inset -32px -32px 63px #2a333e;
+            background-color: #20272f;
+            overflow-x: hidden;
+            /*box-shadow: inset 32px 32px 63px #161b20,*/
+            /*inset -32px -32px 63px #2a333e;*/
+            box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0px 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0px 20px -20px rgba(0, 0, 0, 0.45);
+
+
+        }
+        main > section:nth-child(6) > section:nth-child(3) > div:hover >div:nth-child(3) {
+           height: 332px;
+            transition-duration: 2s;
+            transition-property: all;
+            opacity: 25%;
+
+        }
+        main > section:nth-child(6) > section:nth-child(3) > div:hover >div:nth-child(4) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition-duration: 2s;
+            transition-property: all;
+
+        }
+        main > section:nth-child(6) > section:nth-child(3) > div > h2 {
+            padding-top: 6px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: #FFFF;
+
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
+            width: 74%;
+            height: 60%;
+            /* background-color: #AA2B1D; */
+            background: url("assets/resourses/images/groupLive.gif");
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 20px;
+
+
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div > div:nth-child(4) {
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -1137px;
+            right: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            /*border : 3px solid white;*/
+            animation-name: rotate;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            /*background-color: darkorchid;*/
+            --border-size: 4px;
+            border: var(--border-size) solid transparent;
+            /*border-image: conic-gradient(*/
+
+            /*        #d53e33 0deg 90deg,*/
+            /*        #fbb300 90deg 180deg,*/
+            /*        #377af5 180deg 270deg,*/
+            /*        #399953 270deg 360deg*/
+            /*)*/
+
+
+
+            background: rgb(255 255 255 )
+
+
+        }
+
+        @keyframes rotate {
+          /*  0% {*/
+          /*border-image-width: 10px;*/
+
+          /*  }*/
+          /*  to {*/
+          /*     --angle: rotate(-360deg);*/
+
+          /*  }*/
+            0%{
+                border-image: conic-gradient(
+
+                        #d53e33 0deg 90deg,
+                        #fbb300 90deg 180deg,
+                        #377af5 180deg 270deg,
+                        #399953 270deg 360deg
+                )
+
+            }
+            25%{
+                border-image: conic-gradient(
+
+                        #fbb300 0deg 90deg,
+                        #fbb300 90deg 180deg,
+                        #399953 180deg 270deg,
+                        #d53e33 270deg 360deg
+
+                )
+
+            }
+            50%{
+                border-image: conic-gradient(
+
+                        #d53e33 0deg 90deg,
+                        #fbb300 90deg 180deg,
+                        #377af5 180deg 270deg,
+                        #399953 270deg 360deg
+                )
+
+            }
+            75%{
+                border-image: conic-gradient(
+
+                        #fbb300 0deg 90deg,
+                        #fbb300 90deg 180deg,
+                        #399953 180deg 270deg,
+                        #d53e33 270deg 360deg
+
+                )
+            }
+            100%{
+                border-image: conic-gradient(
+
+                        #d53e33 0deg 90deg,
+                        #fbb300 90deg 180deg,
+                        #377af5 180deg 270deg,
+                        #399953 270deg 360deg
+                )
+
+            }
+        }
+@keyframes border {
+    0%{
+
+      border-radius: 0px;
+    }
+    25%{
+
+        border-top-right-radius : 30px;
+    }
+    50%{
+
+        border-top-left-radius: 30px;
+    }
+    75%{
+border-bottom-left-radius: 30px;
+    }
+    100%{
+        border-bottom-right-radius: 30px;
+    }
+
+}
+        main > section:nth-child(6) > section:nth-child(3) > div > div:nth-child(4) > h4 {
+
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div > div:nth-child(4) > p {
+
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div > div:nth-child(4) > button {
+
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 144px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: max-content;
+
+            color: black;
+
+
+            font-weight: 500;
+            border-radius: 0.5rem;
+            background-color: gold;
+            height: 28px;
+            transition: all .6s;
+            cursor: pointer;
+            width: 105px;
+            border: 3px solid gold;
+            font-size: 15px;
+
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div > div:nth-child(4) > button > a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+
+
+        }
+        main > section:nth-child(6) > section:nth-child(3) > div > div:nth-child(3)  {
+
+            position: absolute;
+
+            bottom: 0;
+
+
+            width: 100%;
+            height: 0px;
+background-color: purple;
+
+            border-radius: 30px;
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div:nth-child(2) > div:nth-child(2) {
+            width: 74%;
+            height: 60%;
+            /* background-color: #AA2B1D; */
+            background: url("assets/resourses/images/melodyMart.gif");
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 20px;
+
+
+        }
+
+        main > section:nth-child(6) > section:nth-child(3) > div:nth-child(3) > div:nth-child(2) {
+            width: 74%;
+            height: 60%;
+            /* background-color: #AA2B1D; */
+            background: url("assets/resourses/images/d24Hostel.gif");
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 20px;
 
 
         }
@@ -861,7 +1156,6 @@
         }
 
 
-
         main > section:nth-child(6) > div:nth-child(4) {
             position: absolute;
             left: 55px;
@@ -872,7 +1166,7 @@
         main > section:nth-child(6) > div:nth-child(5) {
 
             position: absolute;
-            right: 80px;
+            right: 45px;
             top: 250px;
 
 
@@ -907,7 +1201,8 @@
             margin-bottom: 0;
             color: rgba(43, 217, 132, 1);
         }
-        main > section:nth-child(7) > section:nth-child(2){
+
+        main > section:nth-child(7) > section:nth-child(2) {
             width: 900px;
             height: 500px;
 
@@ -919,9 +1214,10 @@
             margin: auto;
             overflow: hidden;
         }
-        main > section:nth-child(7) > section:nth-child(2)>section {
+
+        main > section:nth-child(7) > section:nth-child(2) > section {
             display: flex;
-            width:max-content;
+            width: max-content;
             height: max-content;
             align-items: center;
             justify-content: space-between;
@@ -936,26 +1232,30 @@
             animation-duration: 15s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-animation-direction: alternate;
-
+            animation-direction: alternate;
+            z-index: 2;
 
 
         }
-        main > section:nth-child(7) > section:nth-child(2)>section:hover {
+
+        main > section:nth-child(7) > section:nth-child(2) > section:hover {
             animation-play-state: paused;
         }
-        main > section:nth-child(7) > section:nth-child(2)>section>div:hover {
+
+        main > section:nth-child(7) > section:nth-child(2) > section > div:hover {
             scale: 1.1;
             transition-duration: 3s;
         }
-        main > section:nth-child(7) > section:nth-child(2)>section>div:hover >div:nth-child(2) {
-           height: 430px;
+
+        main > section:nth-child(7) > section:nth-child(2) > section > div:hover > div:nth-child(2) {
+            height: 430px;
             background-color: rgba(43, 217, 132, 1);
             transition-duration: 3s;
             transition-property: height;
             opacity: 70%;
         }
-        main > section:nth-child(7) > section:nth-child(2)>section>div:hover >button:nth-child(3) {
+
+        main > section:nth-child(7) > section:nth-child(2) > section > div:hover > button:nth-child(3) {
             width: 100px;
             position: absolute;
             top: 0;
@@ -966,44 +1266,47 @@ animation-direction: alternate;
             transition-duration: 3s;
             transition-property: all;
         }
-@keyframes asignmentAnima {
-    0%{
-        transform: translateX(0px);
-    }
-    25%{
-        transform: translateX(calc((-100%/4)*1));
-    }
-    50%{
-        transform: translateX(calc((-100%/4)*2));
-    }
-    75%{
-        transform: translateX(calc((-100%/4)*3));
-    }
-        100%{
-            transform: translateX(calc((-100%/4)*4));
+
+        @keyframes asignmentAnima {
+            0% {
+                transform: translateX(0px);
+            }
+            25% {
+                transform: translateX(calc((-100% / 4) * 1));
+            }
+            50% {
+                transform: translateX(calc((-100% / 4) * 2));
+            }
+            75% {
+                transform: translateX(calc((-100% / 4) * 3));
+            }
+            100% {
+                transform: translateX(calc((-100% / 4) * 4));
+            }
+
         }
 
-}
-        main > section:nth-child(7) > section:nth-child(2) >section> div {
+        main > section:nth-child(7) > section:nth-child(2) > section > div {
             overflow-y: hidden;
             position: relative;
-            width: 400px;
-            height: 430px;
+            width: 386px;
+            height: 371px;
             border-radius: 30px;
             background: #20272f;
             box-shadow: inset 2px 2px 63px 0px #494f57, inset -32px -32px 63px #2a333e;
         }
-        main > section:nth-child(7) > section:nth-child(2) >section> div > div:nth-child(2) {
-            width: 400px;
-           height: 0px;
+
+        main > section:nth-child(7) > section:nth-child(2) > section > div > div:nth-child(2) {
+            width: 386px;
+            height: 0px;
             border-radius: 30px;
             position: absolute;
             bottom: 0;
 
         }
 
-        main > section:nth-child(7) > section:nth-child(2) >section> div > img:nth-child(1) {
-width: 300px;
+        main > section:nth-child(7) > section:nth-child(2) > section > div > img:nth-child(1) {
+            width: 300px;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -1013,15 +1316,15 @@ width: 300px;
 
         }
 
-        main > section:nth-child(7) > section:nth-child(2) >section> div > button:nth-child(3) {
+        main > section:nth-child(7) > section:nth-child(2) > section > div > button:nth-child(3) {
 
             color: white;
             text-align: center;
             font-weight: 400;
-            border-radius:15px;
+            border-radius: 15px;
             /* box-shadow: 28px 28px 50px rgba(13, 39, 80, 0.10); */
             background-color: #7461E2;
-border-width: 0;
+            border-width: 0;
             height: 47px;
             transition: all .6s;
             cursor: pointer;
@@ -1035,15 +1338,17 @@ border-width: 0;
             margin: auto;
 
         }
-        main > section:nth-child(7) > section:nth-child(2) >section> div > button:nth-child(3)>a {
+
+        main > section:nth-child(7) > section:nth-child(2) > section > div > button:nth-child(3) > a {
 
             color: white;
             text-align: center;
             font-weight: 500;
-          text-decoration: none;
+            text-decoration: none;
             font-family: 'Montserrat', sans-serif;
 
         }
+
         main > section:nth-child(7) > section:nth-child(3) > div {
 
             border-radius: 100%;
@@ -1052,9 +1357,7 @@ border-width: 0;
             background: rgb(50, 126, 89);
 
 
-
         }
-
 
 
         main > section:nth-child(7) > div:nth-child(4) {
@@ -1467,7 +1770,7 @@ border-width: 0;
             background: url("assets/resourses/images/footer (1).svg");
             background-size: cover;
             background-position: center;
-            background-color: rgba(23, 28, 34, 1) ;
+            background-color: rgba(23, 28, 34, 1);
         }
 
         footer > nav > div > div:nth-child(1) > ul {
@@ -1593,6 +1896,7 @@ border-width: 0;
             header > div:nth-child(1) > div:nth-child(2) > hgroup {
                 margin-top: -2px;
             }
+
             header > div:nth-child(3) {
                 width: 64px;
                 height: 100%;
@@ -1602,11 +1906,13 @@ border-width: 0;
                 background: rgba(43, 217, 132, 1);
                 z-index: 1;
             }
+
             main > section:nth-child(1) > section > hgroup > h4 {
                 font-size: 13px;
                 font-family: 'Montserrat', sans-serif;
                 color: rgba(255, 255, 255, 1);
             }
+
             main > section:nth-child(1) > aside {
                 width: 64px;
                 height: 100%;
@@ -1616,6 +1922,7 @@ border-width: 0;
                 background: rgba(43, 217, 132, 1);
                 z-index: 2;
             }
+
             main > section:nth-child(1) > section > hgroup > h1 {
                 line-height: 1.15;
                 -webkit-text-size-adjust: 100%;
@@ -1626,6 +1933,12 @@ border-width: 0;
                 margin-top: 0;
                 top: -20px;
                 font-size: 34px;
+            }
+
+            main > section:nth-child(1) > div:nth-child(6) > img {
+                width: 379px;
+                animation: smoke3 4s linear infinite;
+                animation-delay: 2.5s;
             }
 
             main > section:nth-child(1) > section > article > p {
@@ -1697,6 +2010,7 @@ border-width: 0;
                 cursor: pointer;
                 font-size: 11px;
             }
+
             main > section:nth-child(1) {
                 position: relative;
                 margin-top: 100px;
@@ -1763,7 +2077,6 @@ border-width: 0;
                 left: 0px;
 
             }
-
 
 
             main > #About > section > article {
@@ -2391,6 +2704,12 @@ border-width: 0;
 
             }
 
+            main > section:nth-child(1) > div:nth-child(7) > img {
+                width: 400px;
+                animation: smoke3 4s linear infinite;
+                animation-delay: 2.5s;
+            }
+
             #svg {
                 margin-left: 35px;
                 width: 300px;
@@ -2572,6 +2891,7 @@ border-width: 0;
                 top: -20px;
                 font-size: 48px;
             }
+
             main > section:nth-child(1) {
                 position: relative;
                 margin-top: 100px;
@@ -2579,6 +2899,7 @@ border-width: 0;
                 background: rgba(23, 28, 34, 1);
                 box-sizing: border-box;
             }
+
             main > section:nth-child(1) > section > article > p > b {
                 line-height: 1.15;
                 -webkit-text-size-adjust: 100%;
@@ -2993,6 +3314,7 @@ border-width: 0;
                 background: rgba(43, 217, 132, 1);
                 z-index: 1;
             }
+
             main > section:nth-child(1) {
                 position: relative;
                 margin-top: 100px;
@@ -3000,6 +3322,7 @@ border-width: 0;
                 background: rgba(23, 28, 34, 1);
                 box-sizing: border-box;
             }
+
             main > section:nth-child(1) > aside {
                 width: 176px;
                 height: 100%;
@@ -3306,209 +3629,209 @@ border-width: 0;
         }
 
         .container {
-	position: absolute;
-    top: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
 
 
-}
+        }
 
-.container::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
+        .container::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
 
+        /* Style Snowballs and Snowflakes */
 
-/* Style Snowballs and Snowflakes */
+        .snow-ball-container .snow-ball {
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: rgba(43, 217, 132, 1);
 
-.snow-ball-container .snow-ball {
-	position: absolute;
-	height: 10px;
-	width: 10px;
-	border-radius: 50%;
-	background:rgba(43, 217, 132, 1);
+        }
 
-}
+        .snow-ball-container .snow-ball:nth-child(even) {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            animation: flake-motion 15s linear infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(even) {
-	position: absolute;
-	width: 16px;
-	height: 16px;
-	animation: flake-motion 15s linear infinite;
-}
+        /* Position the Snowballs above the screen */
 
-/* Position the Snowballs above the screen */
+        .snow-ball-container .snow-ball:nth-child(1) {
+            top: -50%;
+            left: 5%;
+            width: 20px;
+            height: 20px;
+            animation: snowball-animation 12s linear 2s infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(1) {
-	top: -50%;
-	left: 5%;
-	width: 20px;
-	height: 20px;
-	animation: snowball-animation 12s linear 2s infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(2) {
+            top: -20%;
+            left: 10%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(2) {
-	top: -20%;
-	left: 10%;
-}
+        .snow-ball-container .snow-ball:nth-child(3) {
+            top: -50%;
+            left: 15%;
+            animation: snowball-animation 12s linear infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(3) {
-	top: -50%;
-	left: 15%;
-	animation: snowball-animation 12s linear infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(4) {
+            top: -10%;
+            left: 20%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(4) {
-	top: -10%;
-	left: 20%;
-}
+        .snow-ball-container .snow-ball:nth-child(5) {
+            top: -20%;
+            left: 25%;
+            width: 20px;
+            height: 20px;
+            animation: snowball-animation 12s linear 2s infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(5) {
-	top: -20%;
-	left: 25%;
-	width: 20px;
-	height: 20px;
-	animation: snowball-animation 12s linear 2s infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(6) {
+            top: -40%;
+            left: 30%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(6) {
-	top: -40%;
-	left: 30%;
-}
+        .snow-ball-container .snow-ball:nth-child(7) {
+            top: -30%;
+            left: 35%;
+            width: 5px;
+            height: 5px;
+            animation: snowball-animation 12s linear infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(7) {
-	top: -30%;
-	left: 35%;
-	width: 5px;
-	height: 5px;
-	animation: snowball-animation 12s linear infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(8) {
+            top: -20%;
+            left: 40%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(8) {
-	top: -20%;
-	left: 40%;
-}
+        .snow-ball-container .snow-ball:nth-child(9) {
+            top: -50%;
+            left: 45%;
+            width: 5px;
+            height: 5px;
+            animation: snowball-animation 12s linear 2s infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(9) {
-	top: -50%;
-	left: 45%;
-	width: 5px;
-	height: 5px;
-	animation: snowball-animation 12s linear 2s infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(10) {
+            top: -5%;
+            left: 50%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(10) {
-	top: -5%;
-	left: 50%;
-}
+        .snow-ball-container .snow-ball:nth-child(11) {
+            top: -20%;
+            left: 60%;
+            animation: snowball-animation 12s linear infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(11) {
-	top: -20%;
-	left: 60%;
-	animation: snowball-animation 12s linear infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(12) {
+            top: -10%;
+            left: 70%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(12) {
-	top: -10%;
-	left: 70%;
-}
+        .snow-ball-container .snow-ball:nth-child(13) {
+            top: -50%;
+            left: 80%;
+            width: 5px;
+            height: 5px;
+            animation: snowball-animation 12s linear 2s infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(13) {
-	top: -50%;
-	left: 80%;
-	width: 5px;
-	height: 5px;
-	animation: snowball-animation 12s linear 2s infinite;
-}
+        .snow-ball-container .snow-ball:nth-child(14) {
+            top: -20%;
+            left: 90%;
+        }
 
-.snow-ball-container .snow-ball:nth-child(14) {
-	top: -20%;
-	left: 90%;
-}
+        .snow-ball-container .snow-ball:nth-child(15) {
+            top: -50%;
+            left: 95%;
+            width: 30px;
+            height: 30px;
+            animation: snowball-animation 12s linear infinite;
+        }
 
-.snow-ball-container .snow-ball:nth-child(15) {
-	top: -50%;
-	left: 95%;
-	width: 30px;
-	height: 30px;
-	animation: snowball-animation 12s linear infinite;
-}
+        /* Define animations of Snowball and Snowflakes */
 
-/* Define animations of Snowball and Snowflakes */
+        @keyframes snowball-animation {
+            0% {
+                transform: translate(0);
+                opacity: 1;
+            }
 
-@keyframes snowball-animation {
-	0% {
-		transform: translate(0);
-		opacity: 1;
-	}
+            20% {
+                transform: translate(4px, 100px);
+                opacity: 0.8;
+            }
 
-	20% {
-		transform: translate(4px, 100px);
-		opacity: 0.8;
-	}
+            40% {
+                transform: translate(-7px, 200px);
+                opacity: 0.7;
+            }
 
-	40% {
-		transform: translate(-7px, 200px);
-		opacity: 0.7;
-	}
+            60% {
+                transform: translate(10px, 400px);
+                opacity: 0.5;
+            }
 
-	60% {
-		transform: translate(10px, 400px);
-		opacity: 0.5;
-	}
+            80% {
+                transform: translate(-14px, 700px);
+                opacity: 0.2;
+            }
 
-	80% {
-		transform: translate(-14px, 700px);
-		opacity: 0.2;
-	}
+            100% {
+                transform: translate(16px, 900px);
+                opacity: 0;
+            }
+        }
 
-	100% {
-		transform: translate(16px, 900px);
-		opacity: 0;
-	}
-}
+        @keyframes flake-motion {
+            0% {
+                transform: translate(-2px, 0);
+                opacity: 1;
+            }
 
-@keyframes flake-motion {
-	0% {
-		transform: translate(-2px, 0);
-		opacity: 1;
-	}
+            20% {
+                transform: translate(-9px, 200px);
+                opacity: 0.9;
+            }
 
-	20% {
-		transform: translate(-9px, 200px);
-		opacity: 0.9;
-	}
+            40% {
+                transform: translate(14px, 300px);
+                opacity: 0.7;
+            }
 
-	40% {
-		transform: translate(14px, 300px);
-		opacity: 0.7;
-	}
+            60% {
+                transform: translate(-22px, 400px);
+                opacity: 0.6;
+            }
 
-	60% {
-		transform: translate(-22px, 400px);
-		opacity: 0.6;
-	}
+            80% {
+                transform: translate(30px, 600px);
+                opacity: 0.5;
+            }
 
-	80% {
-		transform: translate(30px, 600px);
-		opacity: 0.5;
-	}
+            90% {
+                transform: translate(-40px, 800px);
+                opacity: 0.3;
+            }
 
-	90% {
-		transform: translate(-40px ,800px);
-		opacity: 0.3;
-	}
+            100% {
+                transform: translate(52px, 1000px);
+                opacity: 0;
+            }
+        }
 
-	100% {
-		transform: translate(52px, 1000px);
-		opacity: 0;
-	}
-}
         /**/
         .smoke-wrap {
             position: absolute;
@@ -3636,11 +3959,12 @@ border-width: 0;
             }
         }
 
-        </style>
+    </style>
 
 </head>
 
 <body>
+
 <header>
     <div>
         <img width="100px" src="assets/resourses/images/logo.png" alt="">
@@ -3676,8 +4000,9 @@ border-width: 0;
 </header>
 
 <main>
+
     <section id="Home">
-     
+
         <section>
             <hgroup>
                 <h4>HELLO,I'M</h4>
@@ -3696,53 +4021,34 @@ border-width: 0;
         <div>
             <!--            <img src="assets/resourses/images/welcome_photo.png" alt="">-->
         </div>
-<!--        <div><img width="100px" src="assets/resourses/images/4-removebg-preview.png"></div>-->
-<!--        <div><img width="100px" src="assets/resourses/images/6-removebg-preview.png"></div>-->
-<!--        <div><img width="100px" src="assets/resourses/images/7-removebg-preview.png"></div>-->
-<!--        <div><img width="100px" src="assets/resourses/images/9-removebg-preview.png"></div>-->
-<!--        <div><img width="100px" src="assets/resourses/images/11-removebg-preview.png"></div>-->
+        <!--        <div><img width="100px" src="assets/resourses/images/4-removebg-preview.png"></div>-->
+        <!--        <div><img width="100px" src="assets/resourses/images/6-removebg-preview.png"></div>-->
+        <!--        <div><img width="100px" src="assets/resourses/images/7-removebg-preview.png"></div>-->
+        <!--        <div><img width="100px" src="assets/resourses/images/9-removebg-preview.png"></div>-->
+        <!--        <div><img width="100px" src="assets/resourses/images/11-removebg-preview.png"></div>-->
 
 
         <aside>
             <section>
                 <div>
-                    <a href=""><h1><i class="fa-brands fa-github" style="color: #000000;"></i></h1></a>
+                    <a target="_blank" href="https://github.com/OshandaB"><h1><i class="fa-brands fa-github" style="color: #000000;"></i></h1></a>
                 </div>
                 <div>
-                    <a href=""><h1><i class="fa-brands fa-linkedin" style="color: #000000;"></i></h1></a>
+                    <a target="_blank" href="https://linkedin.com/in/oshanda%20banuka"><h1><i class="fa-brands fa-linkedin" style="color: #000000;"></i></h1></a>
                 </div>
                 <div>
-                    <a href=""><h1><i class="fa-brands fa-facebook" style="color: #000000;"></i></h1></a>
+                    <a target="_blank" href="https://www.facebook.com/oshanda.banuka/"><h1><i class="fa-brands fa-facebook" style="color: #000000;"></i></h1></a>
                 </div>
                 <div>
-                    <a href=""><h1><i class="fa-brands fa-stack-overflow" style="color: #000000;"></i></h1></a>
+                    <a  target="_blank" href="https://stackoverflow.com/users/19775649/oshanda-banuka"><h1><i class="fa-brands fa-stack-overflow" style="color: #000000;"></i></h1></a>
                 </div>
                 <div>
-                    <a href=""><h1><i class="fa-brands fa-hackerrank" style="color: #000000;"></i></h1></a>
+                    <a target="_blank" href="https://www.hackerrank.com/@oshanda893"><h1><i class="fa-brands fa-hackerrank" style="color: #000000;"></i></h1></a>
                 </div>
             </section>
 
         </aside>
-        <div class="container">
-        
-            <div class="snow-ball-container">
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-                <div class="snow-ball"></div>
-            </div>
-        </div>
+
         <div class="smoke-wrap">
             <img class="smoke" src="./assets/resourses/images/smoke.png" alt="smoke">
         </div>
@@ -3936,7 +4242,7 @@ border-width: 0;
                 <g filter="url(#filter4_d_355_60)">
                     <rect x="515" y="1592" width="482" height="262" rx="43" fill="#171C22"/>
                 </g>
-                <rect  x="418" y="261" width="215" height="65" fill="url(#pattern0)"/>
+                <rect x="418" y="261" width="215" height="65" fill="url(#pattern0)"/>
                 <rect x="862" y="599" width="88" height="106" fill="url(#pattern1)"/>
                 <rect x="500" y="915" width="88" height="106" fill="url(#pattern2)"/>
                 <rect x="885" y="1232" width="88" height="106" fill="url(#pattern3)"/>
@@ -4125,13 +4431,44 @@ border-width: 0;
         </section>
         <section>
             <div>
-                <img width="80%" src="assets/resourses/images/website.png" alt="">
+                <h2>Group Live Chat</h2>
+                <!--                <img width="80%" src="assets/resourses/images/website.png" alt="">-->
+                <div></div>
+                <div></div>
+                <div>
+                    <h4>Group Live Chat</h4>
+                    <p>Second Semester <br> Networking Module <br> CourseWork</p>
+                    <button>
+                        <a target="_blank" href="https://github.com/OshandaB/Group_live_chat">View</a>
+                    </button>
+                </div>
+
             </div>
             <div>
-                <img width="80%" src="assets/resourses/images/melody.jpg" alt="">
+                <h2>Melody Mart Management System</h2>
+                <div></div>
+                <div></div>
+                <!--                <img width="80%" src="assets/resourses/images/melody.jpg" alt="">-->
+                <div>
+                    <h4>Melody Mart Management System</h4>
+                    <p>First Semester Final Project</p>
+                    <button>
+                        <a target="_blank" href="https://github.com/OshandaB/LayeredArchitecture-With-MelodyMart">View</a>
+                    </button>
+                </div>
             </div>
             <div>
-                <img width="80%" src="assets/resourses/images/delivery.png" alt="">
+                <h2>Hostel Management System</h2>
+                <!--                <img width="80%" src="assets/resourses/images/delivery.png" alt="">-->
+                <div></div>
+                <div></div>
+                <div>
+                    <h4>Hostel Management System</h4>
+                    <p>Second Semester <br> Hibernate Module<br> CourseWork</p>
+                    <button>
+                        <a target="_blank" href="https://github.com/OshandaB/D24_hostel">View</a>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -4155,21 +4492,23 @@ border-width: 0;
         <section>
             <section>
                 <div><img width="80%" src="assets/resourses/images/html (1).png" alt="">
-                <div>
+                    <div>
 
-                </div>
-                    <button> <a target="_blank" href="pages/assignments.html">View Assignments</a></button>
+                    </div>
+                    <button><a target="_blank" href="pages/assignments.html">View Assignments</a></button>
                 </div>
                 <div><img width="80%" src="assets/resourses/images/java (3).png" alt=""><
                     <div></div>
-                    <button> <a target="_blank" href="pages/assignments.html">View Assignments</a></button></div>
+                    <button><a target="_blank" href="pages/assignments.html">View Assignments</a></button>
+                </div>
                 <div><img width="80%" src="assets/resourses/images/js-file.png" alt="">
                     <div></div>
-                    <button > <a target="_blank" href="pages/assignments.html">View Assignments</a></button></div>
+                    <button><a target="_blank" href="pages/assignments.html">View Assignments</a></button>
+                </div>
                 <div><img src="assets/resourses/images/cssAsign.png">
                     <div></div>
-                    <button >
-                    <a target="_blank" href="pages/assignments.html">View Assignments</a>
+                    <button>
+                        <a target="_blank" href="pages/assignments.html">View Assignments</a>
                     </button>
                 </div>
             </section>
@@ -4179,7 +4518,7 @@ border-width: 0;
             <div></div>
             <div></div>
             <div></div>
-            
+
         </section>
         <div>
             <a href="#next"><h1>
@@ -4308,6 +4647,26 @@ border-width: 0;
         </section>
 
     </section>
+    <div class="container">
+
+        <div class="snow-ball-container">
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+            <div class="snow-ball"></div>
+        </div>
+    </div>
 </main>
 
 
@@ -4344,20 +4703,20 @@ border-width: 0;
 
     <div>
         <div>
-            <a href="">
+            <a target="_blank" href="https://www.linkedin.com/in/oshanda%20banuka">
                 <h1><i class="fa-brands fa-linkedin fa-beat fa-lg" style="color: rgba(255, 255, 255, 1);;"></i></h1></a>
         </div>
         <div>
-            <a href="">
+            <a target="_blank" href="https://github.com/OshandaB">
                 <h1><i class="fa-brands fa-github fa-beat fa-lg" style="color: rgba(255, 255, 255, 1);;"></i></h1></a>
         </div>
         <div>
-            <a href=""><h1><i class="fa-brands fa-facebook fa-beat fa-lg" style="color: rgba(255, 255, 255, 1);;"></i>
+            <a target="_blank" href="https://www.facebook.com/oshanda.banuka/"><h1><i class="fa-brands fa-facebook fa-beat fa-lg" style="color: rgba(255, 255, 255, 1);;"></i>
             </h1>
             </a></div>
         <div>
 
-            <a href="">
+            <a target="_blank" href="https://stackoverflow.com/users/19775649/oshanda-banuka">
                 <h1><i class="fa-brands fa-stack-overflow fa-beat fa-lg" style="color:rgba(255, 255, 255, 1);;"></i>
                 </h1></a></div>
     </div>
