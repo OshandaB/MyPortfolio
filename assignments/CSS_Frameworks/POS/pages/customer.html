@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assests/boostraps/css/bootstrap.css">
+    <style>
+        .nav-link{
+            color: white;
+        }
+        .nav-link:hover{
+            color: #0BB256;
+        }
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+            color: #0BB256;
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary   d-md-block d-lg-none d-xl-none " style="background-color: #1E1E1E!important;">
+    <div class="container-fluid ">
+        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <ul class="navbar-nav nav flex-column" >
+                <li class="nav-item" >
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active " href="customer.html">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="item.html">Item</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="place_order.html">PlaceOrder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="order_details.html">OrderDetails</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid" >
+    <div class="row  ">
+        <div class="col-md-2 d-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:100vh; background-color: #1E1E1E">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary  " style="background-color: #1E1E1E!important;">
+                <div class="container-fluid nav flex-column">
+                    <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav nav flex-column" >
+                            <li class="nav-item" >
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active " href="customer.html">Customer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="item.html">Item</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="place_order.html">PlaceOrder</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="order_details.html">OrderDetails</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class=" col-md-10">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success " type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+            <div class="form-floating mb-3 p-1">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Customer Id</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="flotingName" placeholder="Password">
+                <label for="flotingName">Customer Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingAddress" placeholder="Password">
+                <label for="floatingAddress">Customer Address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingSalary" placeholder="Password">
+                <label for="floatingSalary">Customer Salary</label>
+            </div>
+
+            <div class="btn-group  mt-3" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-warning">Update</button>
+                <button type="button" class="btn btn-success">Save</button>
+            </div>
+            <div class="table-responsive  mt-5 " style="height: 200px" >
+                <table class="table table-bordered table-hover table-striped-columns ">
+
+                    <thead>
+
+                    <tr>
+                        <th class="bg-danger text-white">No</th>
+                        <th class="bg-danger text-white">Customer Name</th>
+                        <th class="bg-danger text-white">Customer Address</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>C001</td>
+                        <td>Isuru</td>
+                        <td>Pitiwalla</td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Oshanda</td>
+                        <td>Baddegama</td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Kaveen</td>
+                        <td>Waligama</td>
+                    </tr>
+                    <tr>
+                        <td>C004</td>
+                        <td>Hasith</td>
+                        <td>Galagoda</td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Kaveen</td>
+                        <td>Waligama</td>
+                    </tr>
+                    <tr>
+                        <td>C004</td>
+                        <td>Hasith</td>
+                        <td>Galagoda</td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Kaveen</td>
+                        <td>Waligama</td>
+                    </tr>
+                    <tr>
+                        <td>C004</td>
+                        <td>Hasith</td>
+                        <td>Galagoda</td>
+                    </tr>
+                    </tbody>
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="assests/boostraps/js/bootstrap.js"></script>
+</body>
+</html>

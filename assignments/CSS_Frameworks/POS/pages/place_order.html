@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../assests/boostraps/css/bootstrap.css">
+  <style>
+    .nav-link{
+      color: white;
+    }
+    .nav-link:hover{
+      color: #0BB256;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+      color: #0BB256;
+    }
+  </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary  d-md-block d-lg-none d-xl-none " style=" background-color: #1E1E1E!important;">
+  <div class="container-fluid ">
+    <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav3">
+      <ul class="navbar-nav nav flex-column" >
+        <li class="nav-item" >
+          <a class="nav-link"  href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="customer.html">Customer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="item.html">Item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="place_order.html">PlaceOrder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="order_details.html">OrderDetails</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" >
+  <div class="row  ">
+    <div class="col-md-2 d-none d-sm-none d-md-none d-lg-block d-xl-block " style="height: 100vh; background-color: #1E1E1E">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mt-3" style=" background-color: #1E1E1E!important;">
+        <div class="container-fluid nav flex-column">
+          <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav flex-column" >
+              <li class="nav-item" >
+                <a class="nav-link"  href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="customer.html">Customer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="item.html">Item</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="place_order.html">PlaceOrder</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="order_details.html">OrderDetails</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-10 bg-gradient ">
+         <div class="container-fluid mt-3">
+           <div class="row">
+             <div class="col-xs-12 col-lg-6 col-xl-4 shadow-lg p-3 mb-5 bg-body-tertiary rounded g-2 ">
+               <h4 style="text-align: center; color: #0BB256">Invoice Details</h4>
+               <div class="row g-2">
+                 <div class="col-6">
+                   <label for="inputState" class="form-label">Order Id :</label>
+                   <select id="inputState" class="form-select">
+
+                     <option>C001</option>
+                     <option>C002</option>
+                     <option>C003</option>
+                   </select>
+                 </div>
+                 <div class="col-6">
+                   <label for="date" class="form-label">Order Date :</label>
+                   <input type="date" id="date" class="form-control" placeholder="Order Date" aria-label="Order Date">
+                 </div>
+                 <div class="col-6">
+                   <label for="customer" class="form-label">Customer :</label>
+                   <input type="text" id="customer" class="form-control" placeholder="Customer" aria-label="Last name">
+                 </div>
+                 <div class="col-6">
+                   <label for="id" class="form-label">Customer Id :</label>
+                   <input type="text" id="id" class="form-control" placeholder="Customer Id" aria-label="Last name">
+                 </div>
+                 <div class="col-6">
+                   <label for="name" class="form-label">Customer Name :</label>
+                   <input type="text" id="name" class="form-control" placeholder="Customer Name" aria-label="Last name">
+                 </div>
+                 <div class="col-6">
+                   <label for="salary" class="form-label">Customer Salary :</label>
+                   <input type="text" id="salary" class="form-control" placeholder="Salary" aria-label="Last name">
+                 </div>
+                 <div class="col-6">
+                   <label for="address" class="form-label">Customer Address :</label>
+                   <input type="text" id="address" class="form-control" placeholder="Address" aria-label="Last name">
+                 </div>
+               </div>
+             </div>
+             <div class="col-xs-12 col-lg-6 col-xl-4 shadow-lg p-3 mb-5 bg-body-tertiary bg-opacity-10 rounded g-2 ">
+               <h4 style="text-align: center; color: #0BB256">Item Select</h4>
+               <div class="row g-2">
+                 <div class="col-6">
+                   <label for="inputState1" class="form-label">Order Id :</label>
+                   <select id="inputState1" class="form-select">
+
+                     <option>P001</option>
+                     <option>P002</option>
+                     <option>P003</option>
+                   </select>      </div>
+                 <div class="col-6">
+                   <label for="itemCode" class="form-label">Item Code :</label>
+                   <input type="text" id="itemCode" class="form-control" placeholder="Item Code" aria-label="Last name">
+                 </div>
+                 <div class="col-4">
+                   <label for="itemName" class="form-label">Item Name :</label>
+                   <input type="text" id="itemName" class="form-control" placeholder="Item Name" aria-label="Last name">
+                 </div>
+                 <div class="col-4">
+                   <label for="price" class="form-label">Price :</label>
+                   <input type="text"  id="price" class="form-control" placeholder="Price" aria-label="Last name">
+                 </div>
+                 <div class="col-4">
+                   <label for="qtyH" class="form-label">QtyOnHand :</label>
+                   <input type="text"  id="qtyH" class="form-control" placeholder="QtyOnHand" aria-label="Last name">
+                 </div>
+                 <div class="col-4">
+                   <label for="qty" class="form-label">OrderQty :</label>
+                   <input type="text"  id="qty" class="form-control" placeholder="OrderQty" aria-label="Last name">
+                 </div>
+
+               </div>
+               <div class="col-3">
+                 <button type="button" class="btn btn-warning mt-3  ">AddToCart</button>
+               </div>
+
+             </div>
+             <div class="col-xs-12 col-lg-6 col-xl-4 shadow-lg p-3 mb-5 bg-body-tertiary bg-opacity-10 rounded g-2  " >
+               <div class="row g-2">
+                 <div class="col-6">
+                   <label for="cash" class="form-label">Cash :</label>
+                   <input type="text" id="cash" class="form-control" placeholder="Cash" aria-label="First name">
+                 </div>
+                 <div class="col-6">
+                   <label for="discount" class="form-label">Discount :</label>
+                   <input type="number" id="discount" class="form-control" placeholder="Discount" aria-label="Last name">
+                 </div>
+                 <div class="col-6">
+                   <label for="Balance" class="form-label">Balance :</label>
+                   <input type="text" id="Balance" class="form-control" placeholder="Balance" aria-label="Last name">
+                 </div>
+                 <button type="button" class="btn btn-primary mt-3  ">Purchase</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+      <div class="table-responsive  mt-3 " style="height: 200px" >
+        <table class="table table-bordered table-hover table-striped-columns ">
+
+          <thead>
+
+          <tr>
+            <th style="background-color:#0BB256 " class="text-white">Item Code</th>
+            <th  style="background-color:#0BB256 " class=" text-white">Item Name</th>
+            <th  style="background-color:#0BB256 " class=" text-white">Price</th>
+            <th  style="background-color:#0BB256 " class=" text-white">Quantity</th>
+            <th  style="background-color:#0BB256 " class=" text-white">Total</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>P002</td>
+            <td>Keerisamba 5kg</td>
+            <td>525</td>
+            <td>2</td>
+            <td>1050</td>
+          </tr>
+          <tr>
+            <td>P001</td>
+            <td>sugar 1kg</td>
+            <td>200</td>
+            <td>2</td>
+            <td>400</td>
+          </tr>
+
+
+
+
+          </tbody>
+
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
