@@ -47,3 +47,9 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 - [@OshandaB](https://github.com/OshandaB)
 
+
+## Demo
+
+POS System
+
+https://oshandab.github.io/MyPortfolio/assignments/CSS_Frameworks/POS/pages/index.html
