@@ -38,19 +38,19 @@
         <div class="collapse navbar-collapse" id="navbarNav5">
             <ul class="navbar-nav nav flex-column" >
                 <li class="nav-item" >
-                    <a id="#ho" class="nav-link" aria-current="page" href="#ho" >Home</a>
+                    <a id="ho" class="nav-link" aria-current="page" href="#ho" >Home</a>
                 </li>
                 <li class="nav-item">
-                    <a  id="#cu" class="nav-link active ">Customer</a>
+                    <a  id="cu" class="nav-link active ">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a  id="#it" class="nav-link" >Item</a>
+                    <a  id="it" class="nav-link" >Item</a>
                 </li>
                 <li class="nav-item">
-                    <a id="#plao" class="nav-link" >PlaceOrder</a>
+                    <a id="plao" class="nav-link" >PlaceOrder</a>
                 </li>
                 <li class="nav-item">
-                    <a id="#oD" class="nav-link" >OrderDetails</a>
+                    <a id="oD" class="nav-link" >OrderDetails</a>
                 </li>
             </ul>
         </div>
@@ -785,33 +785,7 @@
     </div>
     </div>
 </section>
-<!--<nav class="navbar navbar-expand-lg bg-body-tertiary  d-md-block d-lg-none d-xl-none" style=" background-color: #1E1E1E!important;">-->
-<!--    <div class="container-fluid ">-->
-<!--        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>-->
-<!--        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--            <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse" id="navbarNav1">-->
-<!--            <ul class="navbar-nav nav flex-column" >-->
-<!--                <li class="nav-item" >-->
-<!--                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link " href="customer.html">Customer</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="item.html">Item</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="place_order.html">PlaceOrder</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="order_details.html">OrderDetails</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
+
 <script>
     let dashboard = document.querySelector('#dashbord');
     dashboard.style.display='block';
@@ -855,35 +829,9 @@
     let it = document.querySelector('#it');
     let po = document.querySelector('#plao');
     let od = document.querySelector('#oD');
-// clickCust.click(function () {
-//     dashboard.css("display","none")
-//     customer.css("display","block")
-//     item.css("display","none")
-//     placeOrder.css("display","none")
-//     orderDetail.css("display","none")
-//     // dashboard.style.display='none';
-//     // customer.style.display='block';
-//     // item.style.display='none';
-//     // placeOrder.style.display='none';
-//     // orderDetail.style.display='none';
-// })
-    // ho.addEventListener("click",function () {
-    //     customer.style.display='none';
-    //     dashboard.style.display='block';
-    //     item.style.display='none';
-    //     placeOrder.style.display='none';
-    //     orderDetail.style.display='none';
-    //
-    // });
-    // cu.addEventListener("click",function () {
-    //     dashboard.style.display='none';
-    //     customer.style.display='block';
-    //     item.style.display='none';
-    //     placeOrder.style.display='none';
-    //     orderDetail.style.display='none';
-    //
-    // });
+    // laptop
     clickHome.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'dashboard');
         dashboard.style.display='block';
         customer.style.display='none';
         item.style.display='none';
@@ -892,6 +840,7 @@
 
     });
     clickHome1.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'dashboard');
         dashboard.style.display='block';
         customer.style.display='none';
         item.style.display='none';
@@ -900,6 +849,7 @@
 
     });
     clickHome2.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'dashboard');
         dashboard.style.display='block';
         customer.style.display='none';
         item.style.display='none';
@@ -908,6 +858,7 @@
 
     });
     clickHome3.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'dashboard');
         dashboard.style.display='block';
         customer.style.display='none';
         item.style.display='none';
@@ -916,6 +867,7 @@
 
     });
     clickHome4.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'dashboard');
         dashboard.style.display='block';
         customer.style.display='none';
         item.style.display='none';
@@ -1103,7 +1055,52 @@
         placeOrder.style.display='none';
 
     });
+    // mobile
+    ho.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'dashboard');
+        customer.style.display='none';
+        dashboard.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
 
+    });
+    cu.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'customer');
+        dashboard.style.display='none';
+        customer.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    it.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'item');
+        dashboard.style.display='none';
+        customer.style.display='none';
+        item.style.display='block';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    po.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'placeOrder');
+        dashboard.style.display='none';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='block';
+        orderDetail.style.display='none';
+
+    });
+    od.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'orderDetail');
+        dashboard.style.display='none';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='block';
+
+    });
     document.addEventListener('DOMContentLoaded', function () {
         // Retrieve the ID of the last active section from session storage
         const lastActiveSection = sessionStorage.getItem('lastActiveSection');
@@ -1128,6 +1125,8 @@
             const activeSection = document.querySelector(`#${lastActiveSection}`);
             if (activeSection) {
                 activeSection.style.display = 'block';
+            }else {
+                dashboard.style.display='block';
             }
         }
     });
