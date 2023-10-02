@@ -855,7 +855,18 @@
     let it = document.querySelector('#it');
     let po = document.querySelector('#plao');
     let od = document.querySelector('#oD');
-
+// clickCust.click(function () {
+//     dashboard.css("display","none")
+//     customer.css("display","block")
+//     item.css("display","none")
+//     placeOrder.css("display","none")
+//     orderDetail.css("display","none")
+//     // dashboard.style.display='none';
+//     // customer.style.display='block';
+//     // item.style.display='none';
+//     // placeOrder.style.display='none';
+//     // orderDetail.style.display='none';
+// })
     // ho.addEventListener("click",function () {
     //     customer.style.display='none';
     //     dashboard.style.display='block';
@@ -913,6 +924,8 @@
 
     });
     clickCust.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'customer');
+
         dashboard.style.display='none';
         customer.style.display='block';
         item.style.display='none';
@@ -921,6 +934,7 @@
 
     });
     clickCust1.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'customer');
         dashboard.style.display='none';
         customer.style.display='block';
         item.style.display='none';
@@ -929,6 +943,7 @@
 
     });
     clickCust2.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'customer');
         dashboard.style.display='none';
         customer.style.display='block';
         item.style.display='none';
@@ -937,6 +952,7 @@
 
     });
     clickCust3.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'customer');
         dashboard.style.display='none';
         customer.style.display='block';
         item.style.display='none';
@@ -944,6 +960,7 @@
         orderDetail.style.display='none';
     });
     clickCust4.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'customer');
         dashboard.style.display='none';
         customer.style.display='block';
         item.style.display='none';
@@ -952,6 +969,7 @@
     });
 
     clickItem.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'item');
         dashboard.style.display='none';
         item.style.display='block';
         customer.style.display='none';
@@ -960,6 +978,7 @@
         orderDetail.style.display='none';
     });
     clickItem1.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'item');
         dashboard.style.display='none';
         item.style.display='block';
         customer.style.display='none';
@@ -968,6 +987,7 @@
         orderDetail.style.display='none';
     });
     clickItem2.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'item');
         dashboard.style.display='none';
         item.style.display='block';
         customer.style.display='none';
@@ -976,6 +996,7 @@
         orderDetail.style.display='none';
     });
     clickItem3.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'item');
         dashboard.style.display='none';
         item.style.display='block';
         customer.style.display='none';
@@ -984,6 +1005,7 @@
         orderDetail.style.display='none';
     });
     clickItem4.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'item');
         dashboard.style.display='none';
         item.style.display='block';
         customer.style.display='none';
@@ -992,6 +1014,7 @@
         orderDetail.style.display='none';
     });
     clickPlace.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'placeOrder');
         dashboard.style.display='none';
         placeOrder.style.display='block';
         customer.style.display='none';
@@ -1000,6 +1023,7 @@
         orderDetail.style.display='none';
     });
     clickPlace1.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'placeOrder');
         dashboard.style.display='none';
         placeOrder.style.display='block';
         customer.style.display='none';
@@ -1008,6 +1032,7 @@
         orderDetail.style.display='none';
     });
     clickPlace2.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'placeOrder');
         dashboard.style.display='none';
         placeOrder.style.display='block';
         customer.style.display='none';
@@ -1016,6 +1041,7 @@
         orderDetail.style.display='none';
     });
     clickPlace3.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'placeOrder');
         dashboard.style.display='none';
         placeOrder.style.display='block';
         customer.style.display='none';
@@ -1024,6 +1050,7 @@
         orderDetail.style.display='none';
     });
     clickPlace4.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'placeOrder');
         dashboard.style.display='none';
         placeOrder.style.display='block';
         customer.style.display='none';
@@ -1032,6 +1059,7 @@
         orderDetail.style.display='none';
     });
     clickDetails.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'orderDetail');
         dashboard.style.display='none';
         orderDetail.style.display='block';
         customer.style.display='none';
@@ -1040,6 +1068,7 @@
 
     });
     clickDetails1.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'orderDetail');
         dashboard.style.display='none';
         orderDetail.style.display='block';
         customer.style.display='none';
@@ -1048,6 +1077,7 @@
 
     });
     clickDetails2.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'orderDetail');
         dashboard.style.display='none';
         orderDetail.style.display='block';
         customer.style.display='none';
@@ -1056,6 +1086,7 @@
 
     });
     clickDetails3.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'orderDetail');
         dashboard.style.display='none';
         orderDetail.style.display='block';
         customer.style.display='none';
@@ -1064,6 +1095,7 @@
 
     });
     clickDetails4.addEventListener("click",function () {
+        sessionStorage.setItem('lastActiveSection', 'orderDetail');
         dashboard.style.display='none';
         orderDetail.style.display='block';
         customer.style.display='none';
@@ -1072,6 +1104,33 @@
 
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        // Retrieve the ID of the last active section from session storage
+        const lastActiveSection = sessionStorage.getItem('lastActiveSection');
+
+        // Hide all sections
+        const sections = document.querySelectorAll('section');
+        // dashboard.style.display='block';
+
+        // dashboard.style.display='none';
+        // customer.style.display='none';
+        // item.style.display='none';
+        // placeOrder.style.display='none';
+        // orderDetail.style.display='none';
+
+
+        if (lastActiveSection) {
+            sections.forEach(section => {
+
+                section.style.display = 'none';
+
+            });
+            const activeSection = document.querySelector(`#${lastActiveSection}`);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+            }
+        }
+    });
 
 
 </script>
