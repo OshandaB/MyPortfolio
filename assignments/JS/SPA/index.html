@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pos System</title>
+    <link rel="stylesheet" href="assests/boostraps/css/bootstrap.css">
+    <style>
+        body{
+
+        }
+        body>div>div:nth-child(1)>nav>div>a{
+            color: white;
+        }
+        .nav-link{
+            color: white;
+            cursor: pointer;
+        }
+        .nav-link:hover{
+            color: #0BB256;
+        }
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+            color: #0BB256;
+        }
+
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary   d-md-block d-lg-none d-xl-none " style="background-color: #1E1E1E!important;">
+    <div class="container-fluid ">
+        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav5" aria-controls="navbarNav5" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav5">
+            <ul class="navbar-nav nav flex-column" >
+                <li class="nav-item" >
+                    <a id="#ho" class="nav-link" aria-current="page" href="#ho" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="#cu" class="nav-link active ">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="#it" class="nav-link" >Item</a>
+                </li>
+                <li class="nav-item">
+                    <a id="#plao" class="nav-link" >PlaceOrder</a>
+                </li>
+                <li class="nav-item">
+                    <a id="#oD" class="nav-link" >OrderDetails</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="dashbord">
+    <div class="container-fluid" >
+        <div class="row  ">
+
+            <div class="col-sm-5 col-md-5 col-lg-3 col-xl-2 col-xxl-3 d-none d-sm-none d-md-none d-lg-block d-xl-block " style=" background-color: #1E1E1E">
+
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 100vh; background-color: #1E1E1E!important;">
+                    <div class="container-fluid nav flex-column">
+                        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav nav flex-column" >
+                                <li class="nav-item" >
+                                    <a class="nav-link active home" aria-current="page" >Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  class="nav-link cust" >Customer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link item" >Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link placeOrder" >PlaceOrder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link oDetail" >OrderDetails</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class=" mt-md-3 mt-lg-0  col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 col-xxl-9 bg-black  ">
+                <div id="carouselExampleCaptions"  class="carousel slide">
+                    <div class="carousel-indicators ">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img  src="assests/images/sk-CK6tjAIMJWM-unsplash.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assests/images/sk-CK6tjAIMJWM-unsplash.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img  src="assests/images/sk-uVPV_nV17Tw-unsplash.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class=" mt-md-3 mt-lg-0  col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 col-xxl-9 bg-black d-lg-none d-xxl-none d-md-none d-sm-block d-xm-block">
+                <div id="carouselExampleCaptions1"  class="carousel slide  ">
+                    <div class="carousel-indicators ">
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img  src="assests/images/sk-CK6tjAIMJWM-unsplash.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assests/images/sk-CK6tjAIMJWM-unsplash.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img  src="assests/images/sk-uVPV_nV17Tw-unsplash.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="customer">
+    <!--    <nav class="navbar navbar-expand-lg bg-body-tertiary   d-md-block d-lg-none d-xl-none " style="background-color: #1E1E1E!important;">-->
+    <!--        <div class="container-fluid ">-->
+    <!--            <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>-->
+    <!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--                <span class="navbar-toggler-icon"></span>-->
+    <!--            </button>-->
+    <!--            <div class="collapse navbar-collapse" id="navbarNav1">-->
+    <!--                <ul class="navbar-nav nav flex-column" >-->
+    <!--                    <li class="nav-item" >-->
+    <!--                        <a class="nav-link" aria-current="page" href="index.html">Home</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link active " href="customer.html">Customer</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link" href="item.html">Item</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link" href="place_order.html">PlaceOrder</a>-->
+    <!--                    </li>-->
+    <!--                    <li class="nav-item">-->
+    <!--                        <a class="nav-link" href="order_details.html">OrderDetails</a>-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </nav>-->
+    <div class="container-fluid" >
+        <div class="row  ">
+            <div class="col-md-2 d-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:100vh; background-color: #1E1E1E">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 100vh; background-color: #1E1E1E!important;">
+                    <div class="container-fluid nav flex-column">
+                        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav1">
+                            <ul class="navbar-nav nav flex-column" >
+                                <li class="nav-item" >
+                                    <a class="nav-link home" aria-current="page" >Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  class="nav-link active cust" >Customer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link item" >Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link placeOrder" >PlaceOrder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link oDetail" >OrderDetails</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class=" col-md-10">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success " type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+                <div class="form-floating mb-3 p-1">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Customer Id</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="flotingName" placeholder="Password">
+                    <label for="flotingName">Customer Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingAddress" placeholder="Password">
+                    <label for="floatingAddress">Customer Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingSalary" placeholder="Password">
+                    <label for="floatingSalary">Customer Salary</label>
+                </div>
+
+                <div class="btn-group  mt-3" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-warning">Update</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                </div>
+                <div class="table-responsive  mt-5 " style="height: 200px" >
+                    <table class="table table-bordered table-hover table-striped-columns ">
+
+                        <thead>
+
+                        <tr>
+                            <th style="background-color:#0BB256" class="text-white">No</th>
+                            <th style="background-color:#0BB256" class="text-white">Customer Name</th>
+                            <th style="background-color:#0BB256" class="text-white">Customer Address</th>
+                            <th style="background-color:#0BB256" class="text-white">Customer Salary</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>C001</td>
+                            <td>Isuru</td>
+                            <td>Pitiwalla</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C002</td>
+                            <td>Oshanda</td>
+                            <td>Baddegama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Kaveen</td>
+                            <td>Waligama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Hasith</td>
+                            <td>Galagoda</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Kaveen</td>
+                            <td>Waligama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Hasith</td>
+                            <td>Galagoda</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Kaveen</td>
+                            <td>Waligama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Hasith</td>
+                            <td>Galagoda</td>
+                            <td>20000</td>
+                        </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="item">
+    <div class="container-fluid" >
+        <div class="row  ">
+            <div class="col-md-2 d-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:100vh; background-color: #1E1E1E">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 100vh; background-color: #1E1E1E!important;">
+                    <div class="container-fluid nav flex-column">
+                        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav2" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav2">
+                            <ul class="navbar-nav nav flex-column" >
+                                <li class="nav-item" >
+                                    <a class="nav-link home" aria-current="page" >Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  class="nav-link active cust" >Customer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link item" >Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link placeOrder" >PlaceOrder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link oDetail" >OrderDetails</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class=" col-md-10">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success " type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+                <div class="form-floating mb-3 p-1">
+                    <input type="text" class="form-control" id="code" placeholder="name@example.com">
+                    <label for="code">Item Code</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Password">
+                    <label for="name">Item Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="price" placeholder="Password">
+                    <label for="price">Price</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="qty" placeholder="Password">
+                    <label for="qty">Quantity</label>
+                </div>
+
+                <div class="btn-group  mt-3" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-warning">Update</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                </div>
+                <div class="table-responsive  mt-5  " style="height: 200px" >
+                    <table class="table table-bordered table-hover table-striped-columns ">
+
+                        <thead>
+
+                        <tr>
+                            <th style="background-color:#0BB256"  class=" text-white">Item Code</th>
+                            <th style="background-color:#0BB256"  class=" text-white">Item Name</th>
+                            <th style="background-color:#0BB256"  class=" text-white">Price</th>
+                            <th style="background-color:#0BB256"  class=" text-white">Qty</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>P001</td>
+                            <td>Sunlight</td>
+                            <td>200.00</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>P002</td>
+                            <td>Sugar</td>
+                            <td>150.00</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>P003</td>
+                            <td>keerisamnba</td>
+                            <td>300</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>P004</td>
+                            <td>maliban</td>
+                            <td>300</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>P005</td>
+                            <td>ratthi</td>
+                            <td>1000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>P005</td>
+                            <td>ratthi</td>
+                            <td>1000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>P005</td>
+                            <td>ratthi</td>
+                            <td>1000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>P005</td>
+                            <td>ratthi</td>
+                            <td>1000</td>
+                            <td>50</td>
+                        </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="placeOrder">
+    <div class="container-fluid" >
+        <div class="row  ">
+            <div class="col-md-2 d-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:100vh; background-color: #1E1E1E">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 100vh; background-color: #1E1E1E!important;">
+                    <div class="container-fluid nav flex-column">
+                        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav3">
+                            <ul class="navbar-nav nav flex-column" >
+                                <li class="nav-item" >
+                                    <a class="nav-link home" aria-current="page" >Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  class="nav-link active cust" >Customer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link item" >Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link placeOrder" >PlaceOrder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link oDetail" >OrderDetails</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-10 bg-gradient ">
+                <div class="container-fluid mt-3">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-6 col-xl-4  p-3 mt-4 bg-white shadow-lg " style="border-radius: 10px; border: 2px solid #0BB256">
+                            <h4 style="text-align: center; color: #0BB256">Invoice Details</h4>
+                            <div class="row g-2">
+                                <div class="col-6">
+
+                                    <label for="oId" class="form-label">Order Id :</label>
+                                    <input type="text" id="oId" class="form-control" placeholder="Order Id" aria-label="Last name">
+                                    f
+                                </div>
+                                <div class="col-6">
+                                    <label for="date" class="form-label">Order Date :</label>
+                                    <input type="date" id="date" class="form-control" placeholder="Order Date" aria-label="Order Date">
+                                </div>
+                                <div class="col-6">
+                                    <label for="inputState" class="form-label">Customer :</label>
+                                    <select id="inputState" class="form-select">
+
+                                        <option>C001</option>
+                                        <option>C002</option>
+                                        <option>C003</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label for="id" class="form-label">Customer Id :</label>
+                                    <input type="text" id="id" class="form-control" placeholder="Customer Id" aria-label="Last name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="name" class="form-label">Customer Name :</label>
+                                    <input type="text" id="cname" class="form-control" placeholder="Customer Name" aria-label="Last name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="salary" class="form-label">Customer Salary :</label>
+                                    <input type="text" id="salary" class="form-control" placeholder="Salary" aria-label="Last name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="address" class="form-label">Customer Address :</label>
+                                    <input type="text" id="address" class="form-control" placeholder="Address" aria-label="Last name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-6 col-xl-4 column-gap-xl-2  p-3 mt-4 bg-white shadow-lg  " style="border-radius: 10px; border: 2px solid #0BB256">
+                            <h4 style="text-align: center; color: #0BB256">Item Select</h4>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <label for="inputState1" class="form-label">Order Id :</label>
+                                    <select id="inputState1" class="form-select">
+
+                                        <option>P001</option>
+                                        <option>P002</option>
+                                        <option>P003</option>
+                                    </select>      </div>
+                                <div class="col-6">
+                                    <label for="itemCode" class="form-label">Item Code :</label>
+                                    <input type="text" id="itemCode" class="form-control" placeholder="Item Code" aria-label="Last name">
+                                </div>
+                                <div class="col-4">
+                                    <label for="itemName" class="form-label">Item Name :</label>
+                                    <input type="text" id="itemName" class="form-control" placeholder="Item Name" aria-label="Last name">
+                                </div>
+                                <div class="col-4">
+                                    <label for="price" class="form-label">Price :</label>
+                                    <input type="text"  id="paymemt" class="form-control" placeholder="Price" aria-label="Last name">
+                                </div>
+                                <div class="col-4">
+                                    <label for="qtyH" class="form-label">QtyOnHand :</label>
+                                    <input type="text"  id="qtyH" class="form-control" placeholder="QtyOnHand" aria-label="Last name">
+                                </div>
+                                <div class="col-4">
+                                    <label for="qty" class="form-label">OrderQty :</label>
+                                    <input type="text"  id="oqty" class="form-control" placeholder="OrderQty" aria-label="Last name">
+                                </div>
+
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-warning mt-3  ">AddToCart</button>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-lg-6 col-xl-4 p-3 mt-4  bg-white shadow-lg  " style="border-radius: 10px; border: 2px solid #0BB256">
+                            <h2 style="text-align: center; color: blue" >Total : RS <span>1000</span>/==</h2>
+                            <h2 style="text-align: center;  color: red" >SubTotal : RS <span>1000</span>/==</h2>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <label for="cash" class="form-label">Cash :</label>
+                                    <input type="text" id="cash" class="form-control" placeholder="Cash" aria-label="First name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="discount" class="form-label">Discount :</label>
+                                    <input type="number" id="discount" class="form-control" placeholder="Discount" aria-label="Last name">
+                                </div>
+                                <div class="col-6">
+                                    <label for="Balance" class="form-label">Balance :</label>
+                                    <input type="text" id="Balance" class="form-control" placeholder="Balance" aria-label="Last name">
+                                </div>
+                                <button type="button" class="btn btn-primary mt-3  ">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive  mt-3 " style="height: 200px" >
+                    <table class="table table-bordered table-hover table-striped-columns ">
+
+                        <thead>
+
+                        <tr>
+                            <th style="background-color:#0BB256 " class="text-white">Item Code</th>
+                            <th  style="background-color:#0BB256 " class=" text-white">Item Name</th>
+                            <th  style="background-color:#0BB256 " class=" text-white">Price</th>
+                            <th  style="background-color:#0BB256 " class=" text-white">Quantity</th>
+                            <th  style="background-color:#0BB256 " class=" text-white">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>P002</td>
+                            <td>Keerisamba 5kg</td>
+                            <td>525</td>
+                            <td>2</td>
+                            <td>1050</td>
+                        </tr>
+                        <tr>
+                            <td>P001</td>
+                            <td>sugar 1kg</td>
+                            <td>200</td>
+                            <td>2</td>
+                            <td>400</td>
+                        </tr>
+
+
+
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="orderDetail">
+    <div class="container-fluid" >
+        <div class="row  ">
+            <div class="col-md-2 d-none d-sm-none d-md-none d-lg-block d-xl-block" style="height:100vh; background-color: #1E1E1E">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 100vh; background-color: #1E1E1E!important;">
+                    <div class="container-fluid nav flex-column">
+                        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav4" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav4">
+                            <ul class="navbar-nav nav flex-column" >
+                                <li class="nav-item" >
+                                    <a class="nav-link home" aria-current="page" >Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  class="nav-link active cust" >Customer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link item" >Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link placeOrder" >PlaceOrder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link oDetail" >OrderDetails</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-md-10 ">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success " type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+                <div class="form-floating mb-3 p-1">
+                    <input type="email" class="form-control" id="orId" placeholder="name@example.com">
+                    <label for="orId">Order Id</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="iCode" placeholder="Password">
+                    <label for="iCode">Item Code</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="csId" placeholder="Password">
+                    <label for="csId">Customer ID</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="pay" placeholder="Password">
+                    <label for="pay">Payment</label>
+                </div>
+
+                <div class="btn-group  mt-3" role="group" aria-label="Basic mixed styles example">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-warning">Update</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                </div>
+                <div class="table-responsive  mt-5 " style="height: 200px" >
+                    <table class="table table-bordered table-hover table-striped-columns ">
+
+                        <thead>
+
+                        <tr>
+                            <th style="background-color:#0BB256" class="text-white">Order ID</th>
+                            <th style="background-color:#0BB256" class="text-white">Item Code</th>
+                            <th style="background-color:#0BB256" class="text-white">Qty</th>
+                            <th style="background-color:#0BB256" class="text-white">Payment</th>
+                            <th style="background-color:#0BB256" class="text-white">Customer Id</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>C001</td>
+                            <td>Isuru</td>
+                            <td>Pitiwalla</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C002</td>
+                            <td>Oshanda</td>
+                            <td>Baddegama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Kaveen</td>
+                            <td>Waligama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Hasith</td>
+                            <td>Galagoda</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Kaveen</td>
+                            <td>Waligama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Hasith</td>
+                            <td>Galagoda</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C003</td>
+                            <td>Kaveen</td>
+                            <td>Waligama</td>
+                            <td>20000</td>
+                        </tr>
+                        <tr>
+                            <td>C004</td>
+                            <td>Hasith</td>
+                            <td>Galagoda</td>
+                            <td>20000</td>
+                        </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+<!--<nav class="navbar navbar-expand-lg bg-body-tertiary  d-md-block d-lg-none d-xl-none" style=" background-color: #1E1E1E!important;">-->
+<!--    <div class="container-fluid ">-->
+<!--        <a class="navbar-brand nav flex-column" style="color: white" href="#">POS System</a>-->
+<!--        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarNav1">-->
+<!--            <ul class="navbar-nav nav flex-column" >-->
+<!--                <li class="nav-item" >-->
+<!--                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link " href="customer.html">Customer</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="item.html">Item</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="place_order.html">PlaceOrder</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="order_details.html">OrderDetails</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</nav>-->
+<script>
+    let dashboard = document.querySelector('#dashbord');
+    dashboard.style.display='block';
+    let customer = document.querySelector('#customer');
+    customer.style.display='none';
+    let item = document.querySelector('#item');
+    item.style.display='none';
+    let placeOrder = document.querySelector('#placeOrder');
+    placeOrder.style.display='none';
+    let orderDetail = document.querySelector('#orderDetail');
+    orderDetail.style.display='none';
+    let clickHome = document.getElementsByClassName('home').item(0);
+    let clickHome1 = document.getElementsByClassName('home').item(1);
+    let clickHome2 = document.getElementsByClassName('home').item(2);
+    let clickHome3 = document.getElementsByClassName('home').item(3);
+    let clickHome4 = document.getElementsByClassName('home').item(4);
+
+    let clickCust = document.getElementsByClassName('cust').item(0);
+    let clickCust1 = document.getElementsByClassName('cust').item(1);
+    let clickCust2 = document.getElementsByClassName('cust').item(2);
+    let clickCust3 = document.getElementsByClassName('cust').item(3);
+    let clickCust4 = document.getElementsByClassName('cust').item(4);
+    let clickItem = document.getElementsByClassName('item').item(0);
+    let clickItem1 = document.getElementsByClassName('item').item(1);
+    let clickItem2 = document.getElementsByClassName('item').item(2);
+    let clickItem3 = document.getElementsByClassName('item').item(3);
+    let clickItem4 = document.getElementsByClassName('item').item(4);
+    let clickPlace = document.getElementsByClassName('placeOrder').item(0);
+    let clickPlace1 = document.getElementsByClassName('placeOrder').item(1);
+    let clickPlace2 = document.getElementsByClassName('placeOrder').item(2);
+    let clickPlace3 = document.getElementsByClassName('placeOrder').item(3);
+    let clickPlace4 = document.getElementsByClassName('placeOrder').item(4);
+    let clickDetails = document.getElementsByClassName('oDetail').item(0);
+    let clickDetails1 = document.getElementsByClassName('oDetail').item(1);
+    let clickDetails2 = document.getElementsByClassName('oDetail').item(2);
+    let clickDetails3 = document.getElementsByClassName('oDetail').item(3);
+    let clickDetails4 = document.getElementsByClassName('oDetail').item(4);
+
+    let ho = document.querySelector('#ho');
+    let cu = document.querySelector('#cu');
+    let it = document.querySelector('#it');
+    let po = document.querySelector('#plao');
+    let od = document.querySelector('#oD');
+
+    // ho.addEventListener("click",function () {
+    //     customer.style.display='none';
+    //     dashboard.style.display='block';
+    //     item.style.display='none';
+    //     placeOrder.style.display='none';
+    //     orderDetail.style.display='none';
+    //
+    // });
+    // cu.addEventListener("click",function () {
+    //     dashboard.style.display='none';
+    //     customer.style.display='block';
+    //     item.style.display='none';
+    //     placeOrder.style.display='none';
+    //     orderDetail.style.display='none';
+    //
+    // });
+    clickHome.addEventListener("click",function () {
+        dashboard.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickHome1.addEventListener("click",function () {
+        dashboard.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickHome2.addEventListener("click",function () {
+        dashboard.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickHome3.addEventListener("click",function () {
+        dashboard.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickHome4.addEventListener("click",function () {
+        dashboard.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickCust.addEventListener("click",function () {
+        dashboard.style.display='none';
+        customer.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickCust1.addEventListener("click",function () {
+        dashboard.style.display='none';
+        customer.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickCust2.addEventListener("click",function () {
+        dashboard.style.display='none';
+        customer.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+
+    });
+    clickCust3.addEventListener("click",function () {
+        dashboard.style.display='none';
+        customer.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickCust4.addEventListener("click",function () {
+        dashboard.style.display='none';
+        customer.style.display='block';
+        item.style.display='none';
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+
+    clickItem.addEventListener("click",function () {
+        dashboard.style.display='none';
+        item.style.display='block';
+        customer.style.display='none';
+
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickItem1.addEventListener("click",function () {
+        dashboard.style.display='none';
+        item.style.display='block';
+        customer.style.display='none';
+
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickItem2.addEventListener("click",function () {
+        dashboard.style.display='none';
+        item.style.display='block';
+        customer.style.display='none';
+
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickItem3.addEventListener("click",function () {
+        dashboard.style.display='none';
+        item.style.display='block';
+        customer.style.display='none';
+
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickItem4.addEventListener("click",function () {
+        dashboard.style.display='none';
+        item.style.display='block';
+        customer.style.display='none';
+
+        placeOrder.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickPlace.addEventListener("click",function () {
+        dashboard.style.display='none';
+        placeOrder.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+
+        orderDetail.style.display='none';
+    });
+    clickPlace1.addEventListener("click",function () {
+        dashboard.style.display='none';
+        placeOrder.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+
+        orderDetail.style.display='none';
+    });
+    clickPlace2.addEventListener("click",function () {
+        dashboard.style.display='none';
+        placeOrder.style.display='block';
+        customer.style.display='none';
+
+        item.style.display='none';
+        orderDetail.style.display='none';
+    });
+    clickPlace3.addEventListener("click",function () {
+        dashboard.style.display='none';
+        placeOrder.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+
+        orderDetail.style.display='none';
+    });
+    clickPlace4.addEventListener("click",function () {
+        dashboard.style.display='none';
+        placeOrder.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+
+        orderDetail.style.display='none';
+    });
+    clickDetails.addEventListener("click",function () {
+        dashboard.style.display='none';
+        orderDetail.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+
+    });
+    clickDetails1.addEventListener("click",function () {
+        dashboard.style.display='none';
+        orderDetail.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+
+    });
+    clickDetails2.addEventListener("click",function () {
+        dashboard.style.display='none';
+        orderDetail.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+
+    });
+    clickDetails3.addEventListener("click",function () {
+        dashboard.style.display='none';
+        orderDetail.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+
+    });
+    clickDetails4.addEventListener("click",function () {
+        dashboard.style.display='none';
+        orderDetail.style.display='block';
+        customer.style.display='none';
+        item.style.display='none';
+        placeOrder.style.display='none';
+
+    });
+
+
+
+</script>
+<script src="assests/boostraps/js/bootstrap.js"></script>
+</body>
+</html>
