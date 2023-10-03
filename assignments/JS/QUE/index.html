@@ -77,16 +77,18 @@
 
     
     setInterval(function () {
-        for(let i = 0; i < divs.length; i++){
-            console.log(divs[i]);
-            divs[i].style.background = colors[i];
-
-        }
-
-        let s = colors.pop();
-        colors.unshift(s);
+     processQue();
     },400);
+   function processQue() {
+       for(let i = 0; i < divs.length; i++){
+           console.log(divs[i]);
+           divs[i].style.background = colors[i];
 
+       }
+
+       let s = colors.pop();
+       colors.unshift(s);
+   }
 
     // var box = [div1,div2,div3,div4,div5,div6];
 
