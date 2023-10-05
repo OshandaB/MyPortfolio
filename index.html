@@ -25,6 +25,27 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <style>
+        #loader{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            marigin: auto;
+            background-color: white;
+            z-index: 5;
+        }
+        #loader>div>img{
+            position: absolute;
+            width: 372px;
+            height: 369px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
         * {
             box-sizing: border-box;
             scroll-behavior: smooth;
@@ -4988,6 +5009,9 @@ display: none;
             <div class="snow-ball"></div>
         </div>
     </div>
+   <section id="loader">
+       <div><img src="assets/resourses/images/Rocket.gif"></div>
+   </section>
 </main>
 
 
@@ -5045,7 +5069,13 @@ display: none;
         <small>Copyright &copy; 2023 - Oshanda Banuka All Rights Reserved.</small>
     </p>
 </footer>
-
+<script src="assets/resourses/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+<script>
+    $(window).on('load',function (){
+       $('#loader').css("display","none");
+        $('#loader').css.fadeOut;
+    });
+</script>
 </body>
 
 </html>

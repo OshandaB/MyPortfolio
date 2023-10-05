@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KnightRider</title>
+
+  <link rel="stylesheet" href="assests/boostraps/css/bootstrap.css">
+  <style>
+    body >section{
+      position : relative;
+
+    }
+body >section>div:nth-child(2){
+ position : absolute;
+  top : 250px;
+  right : 0;
+  left : 0;
+  bottom : 0;
+  margin : auto;
+
+
+}
+  </style>
+
+</head>
+<body>
+<section class="bg-black" style="width:100%; height:100vh">
+  <h1 class="p-3" style="color:white; text-align: center">Knight Rider</h1>
+  <div class="container mt-5  ">
+    <div class="row">
+      <div id="1" class="col " style=" height:100px; border:2px solid black; background-color: white">
+        <div ></div>
+      </div>
+      <div id="2" class="col" style="width:200px; height:100px; border:2px solid black; background-color: white">
+        <div ></div>
+      </div>
+      <div id="3" class="col" style=" height:100px; border:2px solid black; background-color: white">
+        <div ></div>
+      </div>
+      <div id="4" class="col" style="height:100px; border:2px solid black; background-color: white">
+        <div ></div>
+      </div>
+      <div id="5" class="col" style="height:100px; border:2px solid black; background-color: white">
+        <div ></div>
+      </div>
+      <div id="6" class="col" style="height:100px; border:2px solid black; background-color: white">
+        <div ></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button  id="start" type="button" class="btn btn-primary mt-5 ms-5">Start</button>
+        <button id="stop" type="button" class="btn btn-danger  mt-5 ms-2">Stop</button>
+      </div>
+<!--      <div class="col-3">-->
+
+<!--      </div>-->
+      <div class="col-5">
+
+        <input type="range" class="form-range mt-5" id="customRange1">
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+</section>
+<script src="../SPA/assests/boostraps/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+<script>
+  let divs1 = document.getElementById('1');
+  let divs2 = document.getElementById("2");
+  let divs3 = document.getElementById("3");
+  let divs4 = document.getElementById("4");
+  let divs5 = document.getElementById("5");
+  let divs6 = document.getElementById("6");
+  // let divs = document.getElementsByClassName("col");
+  let divs = [divs1,divs2,divs3,divs4,divs5,divs6];
+  let btnStart = document.querySelector("#start");
+  let btnStop = document.querySelector("#stop");
+  let interval;
+  // let divs = document.getElementsByClassName("col");
+  let currentIndex = 0;
+let count =0;
+  let leftColours = ['white', 'white', 'white', 'white', 'white', 'white', '#dc1e1e', '#c52525', '#b83030', '#cd4a4a', '#be7474', '#d3c5c5'];
+  let rightColours = ['white', 'white', 'white', 'white', 'white', 'white', '#d3c5c5', '#be7474', '#cd4a4a', '#b83030', '#c52525', '#dc1e1e'];
+  btnStart.addEventListener("click",function () {
+
+
+    clearInterval(interval);
+    let direction = "left";
+    interval = setInterval(function () {
+
+      if (direction === "left") {
+
+        let lastValue = leftColours.shift();
+        leftColours.push(lastValue);
+
+        for (let i = 0; i < leftColours.length; i++) {
+        // console.log(i);
+          // divs[i].style.background= leftColours[i];
+          $('.col'+(i + 1)).css("background",leftColours[i])
+          // console.log("oshanda");
+          console.log(leftColours[0]);
+
+          if (leftColours[0] === "#d3c5c5") {
+            direction = "right";
+          }
+        }
+
+console.log("banuka");
+
+
+
+      } else if (direction === "right") {
+        rightColours.unshift(rightColours.pop());
+        // count++;
+        // console.log("hello"+count);
+        // console.log("imaya"+count);
+        // if (count===2)
+        //   setTimeout(function(){
+        //     console.log("imaya");
+        //   },5000);
+        for (let i = 0; i < rightColours.length; i++) {
+          divs[i].style.backgroundColor = rightColours[i];
+          console.log("hello");
+
+          if (rightColours[6] === "#d3c5c5") {
+            direction = "left";
+          }
+        }
+
+
+
+
+
+
+
+      }
+
+
+      // remove the last index of an array
+
+     //  for (let i = 0; i < leftColours.length; i++) {
+     //    divs[i].style.background=leftColours[i];
+     //  }
+     //
+     //  // remove the last index of an array
+     // leftColours.shift();
+
+    }, 80);
+
+  });
+  btnStop.addEventListener("click",function () {
+    clearInterval(interval);
+  });
+
+
+
+
+</script>
+
+</body>
+</html>

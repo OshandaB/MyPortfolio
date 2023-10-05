@@ -1160,57 +1160,66 @@
 
 </script>
 <script src="assests/boostraps/js/bootstrap.js"></script>
+<script src="assests/boostraps/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 <script>
 <!--    customer manage-->
-let custId = document.querySelector("#floatingInput");
-let custName = document.querySelector("#flotingName");
-let  custAddress = document.querySelector("#floatingAddress");
-let custSalary = document.querySelector("#floatingSalary");
+// let custId = document.querySelector("#floatingInput");
+// let custName = document.querySelector("#flotingName");
+// let  custAddress = document.querySelector("#floatingAddress");
+// let custSalary = document.querySelector("#floatingSalary");
 
   var customerDe = [];
-let btnSave = document.querySelector("#save");
+let btnSave =$("#save");
 let tblCustomer = document.querySelector("#custTable");
- btnSave.addEventListener("click",function () {
+ btnSave.click(function () {
 
-     // customerDe[0] = custId.value;
-     // customerDe[1] = custName.value;
-     // customerDe[2] = custAddress.value;
-     // customerDe[3] = custSalary.value;
 
      var cust ={
-         id : custId.value,
-         name : custName.value,
-         address : custAddress.value,
-         salary :  custSalary.value
+         id : $('#floatingInput').val(),
+         name :  $('#flotingName').val(),
+         address :  $('#floatingAddress').val(),
+         salary :  $('#floatingSalary').val()
      }
      customerDe.push(cust);
      console.log(customerDe);
+     $('#custTable').empty();
+     for (let i=0; i<customerDe.length; i++){
 
-     let tr=document.createElement("tr");
-     let tdId = document.createElement("td");
-     tdId.textContent = cust.id;
-     tr.appendChild(tdId);
-     let tdName = document.createElement("td");
-     tdName.textContent = cust.name;
-     tr.appendChild(tdName);
-
-     let tdAddress = document.createElement("td");
-     tdAddress.textContent = cust.address;
-     tr.appendChild(tdAddress);
-
-     let tdSalary = document.createElement("td");
-     tdSalary.textContent = cust.salary;
-     tr.appendChild(tdSalary);
-
-     tblCustomer.setAttribute("class","table table-bordered table-hover table-striped-columns");
-     tblCustomer.appendChild(tr);
+         let trow = `<tr>
+                            <td>${customerDe[i].id}</td>
+                            <td>${customerDe[i].name}</td>
+                            <td>${customerDe[i].address}</td>
+                            <td>${customerDe[i].salary}</td>
+                        </tr>`
 
 
-     custId.value = "";
-     custName.value = "";
-     custAddress.value = "";
-     custSalary.value = "";
+         $('#custTable').append(trow);
+     }
+     //djkfhjkhhg
+ clickRow();
+
+     // custId.value = "";
+     // custName.value = "";
+     // custAddress.value = "";
+     // custSalary.value = "";
  });
+ clickRow();
+ function clickRow() {
+     $('#custTable>tr').click(function () {
+         // alert("hi");
+         $('#floatingInput').val($(this).children(":eq(0)").text());
+         $('#flotingName').val($(this).children(":eq(1)").text());
+         $('#floatingAddress').val($(this).children(":eq(2)").text());
+         $('#floatingSalary').val($(this).children(":eq(3)").text());
+
+     });
+     $('#custTable>tr').dblclick(function () {
+         alert("hi");
+        ($(this).remove());
+
+
+     });
+ }
 
 
 </script>
