@@ -29,6 +29,12 @@ body >section>div:nth-child(2){
 <body>
 <section class="bg-black" style="width:100%; height:100vh">
   <h1 class="p-3" style="color:white; text-align: center">Knight Rider</h1>
+  <hgroup class="text-center">
+    <h3 class="text-danger d-inline-block">Speed </h3>
+    <h3 id="speed" class="text-primary d-inline-block">50</h3>
+    <h3 class="text-danger d-inline-block">| Waiting Time </h3>
+    <h3 id="waitingT" class="text-primary d-inline-block">2000</h3>
+  </hgroup>
   <div class="container mt-5  ">
     <div class="row">
       <div id="1" class="col " style=" height:100px; border:2px solid black; background-color: white">
@@ -60,10 +66,9 @@ body >section>div:nth-child(2){
 <!--      </div>-->
       <div class="col-5">
 
-        <input type="range" class="form-range mt-5" id="customRange1">
+        <input id="range" type="range" class="form-range mt-5" id="customRange1" min="30" max="70" value="50">
       </div>
     </div>
-
 
 
 
@@ -89,82 +94,122 @@ body >section>div:nth-child(2){
   let btnStart = document.querySelector("#start");
   let btnStop = document.querySelector("#stop");
   let interval;
+  let timeout;
+  let speed = 50;
+  let waitingTime = 2000;
   // let divs = document.getElementsByClassName("col");
   let currentIndex = 0;
 let count =0;
+  const music = new Audio('assignments_JS_Knight_assets_audio_Knight-Rider-Theme-Song.mp3');
   let leftColours = ['white', 'white', 'white', 'white', 'white', 'white', '#dc1e1e', '#c52525', '#b83030', '#cd4a4a', '#be7474', '#d3c5c5'];
   let rightColours = ['white', 'white', 'white', 'white', 'white', 'white', '#d3c5c5', '#be7474', '#cd4a4a', '#b83030', '#c52525', '#dc1e1e'];
-  btnStart.addEventListener("click",function () {
 
 
-    clearInterval(interval);
+  function startI() {
+
+
     let direction = "left";
     interval = setInterval(function () {
+      if(count===48){
+        clearInterval(interval);
+        timeout =setTimeout(function () {
 
-      if (direction === "left") {
+          startI();
+          console.log("snau Vitanage")
 
-        let lastValue = leftColours.shift();
-        leftColours.push(lastValue);
+        },waitingTime);
+        console.log("waiting"+count);
+        // clearInterval(interval);
+        console.log("waiting12"+count);
 
-        for (let i = 0; i < leftColours.length; i++) {
-        // console.log(i);
-          // divs[i].style.background= leftColours[i];
-          $('.col'+(i + 1)).css("background",leftColours[i])
-          // console.log("oshanda");
-          console.log(leftColours[0]);
-
-          if (leftColours[0] === "#d3c5c5") {
-            direction = "right";
-          }
-        }
-
-console.log("banuka");
-
-
-
-      } else if (direction === "right") {
-        rightColours.unshift(rightColours.pop());
-        // count++;
-        // console.log("hello"+count);
-        // console.log("imaya"+count);
-        // if (count===2)
-        //   setTimeout(function(){
-        //     console.log("imaya");
-        //   },5000);
-        for (let i = 0; i < rightColours.length; i++) {
-          divs[i].style.backgroundColor = rightColours[i];
-          console.log("hello");
-
-          if (rightColours[6] === "#d3c5c5") {
-            direction = "left";
-          }
-        }
-
-
-
-
-
-
-
+        // timeout =setTimeout(function () {
+        //
+        //   startI();
+        // console.log("snau Vitanage")
+        //
+        // },waitingTime);
+        count=0;
       }
+      if(count!==48){
+        if (direction === "left") {
+
+          let lastValue = leftColours.shift();
+          leftColours.push(lastValue);
+
+          for (let i = 0; i < leftColours.length; i++) {
+            // console.log(i);
+            //   divs[i].style.background= leftColours[i];
+            $($('.col')[i]).css("background", leftColours[i]);
+
+            // console.log("oshanda");
+            console.log(leftColours[0]);
+            if(count===0){
+              $($('.col')[5]).css("background", "white");
+            }
+            if (leftColours[11] === "#d3c5c5") {
+              direction = "right";
+            }
+          }
+
+
+          count++;
+          console.log("left@@@@@@@@@@"+count);
+
+
+        } else if (direction === "right") {
+          rightColours.unshift(rightColours.pop());
+
+          for (let i = 0; i < rightColours.length; i++) {
+            $($('.col')[i]).css("background", rightColours[i]);
+            console.log("hello");
+
+            if (rightColours[6] === "#d3c5c5") {
+              direction = "left";
+            }
+          }
+          count++;
+          console.log("right@@@@@@@@@@"+count);
+        }
+      }
+
+
 
 
       // remove the last index of an array
 
-     //  for (let i = 0; i < leftColours.length; i++) {
-     //    divs[i].style.background=leftColours[i];
-     //  }
-     //
-     //  // remove the last index of an array
-     // leftColours.shift();
+      //  for (let i = 0; i < leftColours.length; i++) {
+      //    divs[i].style.background=leftColours[i];
+      //  }
+      //
+      //  // remove the last index of an array
+      // leftColours.shift();
 
-    }, 80);
+    }, speed);
+  }
+  btnStart.addEventListener("click",function () {
+  clearInterval(interval);
+  clearInterval(timeout);
+  startI();
+    music.play();
+    music.loop = true;
+
 
   });
+
+  let speedNo = $('#speed');
+  let waiting = $('#waitingT');
   btnStop.addEventListener("click",function () {
     clearInterval(interval);
+    clearInterval(timeout);
+    music.pause();
   });
-
+ $('#range').on("input",function () {
+   let value = $('#range').val();
+   speed=value;
+   waitingTime=value*35;
+   speedNo.text(speed);
+   waiting.text(waitingTime);
+ });
 
 
 
