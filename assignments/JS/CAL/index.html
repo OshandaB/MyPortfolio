@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assests/boostraps/css/bootstrap.css">
+    <title>Calculator</title>
+    <style>
+        body > main {
+            width: 100%;
+            height: 100vh;
+            background: url("dmytro-tolokonov-Jq3WI9IQgEs-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        body > main > section {
+            width: 550px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: black;
+            border-radius: 20px;
+        }
+
+        body > main > section > div:nth-child(2) > div > div > button {
+            width: 250px;
+            height: 80px;
+            background-color: grey;
+
+        }
+        body > main > section > div:nth-child(2) > div > div > button:hover {
+            background-color: #eaeae6;
+            transition: all 0.8s ease;
+            transform: scale(0.95);
+            box-shadow: 1px 1px 54px 1px rgba(0, 0, 0, 0.22);
+
+        }
+   #Cbtn:hover{
+       border-radius: 20px;
+       border: 3px solid #eaeae6;
+       transition: all 0.8s ease;
+       transform: scale(0.95);
+       box-shadow: 1px 1px 10px 1px rgb(255, 255, 255);
+   }
+        body > main > section > div:nth-child(1) > div:nth-child(2) {
+            position: relative;
+            width: 350px;
+            top: -16px;
+
+            text-align: right;
+
+
+            opacity: 93%;
+        }
+
+        input {
+   text-align:end;
+
+
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+
+        <div class="d-flex justify-content-evenly">
+            <div>
+                <button id="Cbtn" type="button"
+                        class="btn rounded-3  fw-bold  align-self-start mt-3" style="font-size: 44px; color: red">C
+                </button>
+            </div>
+            <div>
+                <input disabled type="text" class=" fs-3 form-control shadow fw-bold mt-5 align-self-end"
+                       id="input-field">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1 ">
+                    <button class="shadow rounded-2 btn-values">7</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">8</button>
+                </div>
+                <div class="col-3 fs-1 mt-3  d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">9</button>
+                </div>
+                <div class="col-3 fs-1  mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="bg-warning shadow rounded-2 btn-values">+</button>
+                </div>
+                <div class="col-3 fs-1  mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">4</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">5</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">6</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class=" bg-warning shadow rounded-2 btn-values">-</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">1</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">2</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">3</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="bg-warning shadow rounded-2 btn-values">/</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">0</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="shadow rounded-2 btn-values">.</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class=" bg-primary shadow rounded-2 btn-values">=</button>
+                </div>
+                <div class="col-3 fs-1 mt-3 d-flex align-items-center justify-content-center flex-shrink-1">
+                    <button class="bg-warning shadow rounded-2 btn-values">*</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="assests/boostraps/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+<script>
+    let firstNumber;
+    let text;
+    let secondNumber;
+    let calculate;
+    let result;
+
+    $('button').click(function (e) {
+        console.log(e)
+        value = e.relatedTarget;
+        textV = $(this).text();
+        console.log(textV);
+        if (textV == '+') {
+            calculate = 1;
+            firstNumber = $('input').val();
+            $('input').val("");
+        } else if (textV === '7') {
+
+            if (textV=='+' || textV=='-' || textV=='/' || textV=='*'){
+                $('input').val("");
+            }
+            $('input').val( $('input').val()+$(this).text());
+        } else if (textV === '8') {
+            // $('input').val($(this).text()+"8");
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '9') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '4') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '5') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '6') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '1') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '2') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '3') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '.') {
+
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '0') {
+            // $('input').val($(this).text());
+            $('input').val( $('input').val()+$(this).text());
+
+        } else if (textV === '-') {
+            calculate = 2;
+            firstNumber = $('input').val();
+            $('input').val("");
+        } else if (textV === '/') {
+            calculate = 3;
+            firstNumber = $('input').val();
+            $('input').val("");
+        } else if (textV === '*') {
+            calculate = 4;
+            firstNumber = $('input').val();
+            $('input').val("");
+        }  else if (textV === 'C') {
+
+
+        } else if (textV === '=') {
+            secondNumber = $('input').val();
+            switch (calculate) {
+                case 1:
+                    result = parseFloat(firstNumber) + parseFloat(secondNumber);
+                    console.log("hi" + result);
+                    $('input').val(result);
+                    break;
+                case 2:
+                    result = parseFloat(firstNumber) - parseFloat(secondNumber);
+                    console.log("hi" + result);
+                    $('input').val(result);
+                    break;
+                case 3:
+                    result = parseFloat(firstNumber) / parseFloat(secondNumber);
+                    console.log("hi" + result);
+                    $('input').val(result);
+                    break;
+                case 4:
+                    result = parseFloat(firstNumber) * parseFloat(secondNumber);
+                    console.log("hi" + result);
+                    $('input').val(result);
+            }
+        }
+
+
+    });
+    $('#Cbtn').click(function () {
+        $('input').val("");
+    });
+
+</script>
+</body>
+</html>
