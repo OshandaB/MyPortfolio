@@ -173,46 +173,48 @@
                 $('input').val("");
             }
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
         } else if (textV === '8') {
             // $('input').val($(this).text()+"8");
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '9') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '4') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '5') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '6') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '1') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '2') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
+            // calculation($('input').val( $('input').val()+$(this).text()));
+
 
         } else if (textV === '3') {
             // $('input').val($(this).text());
             $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+            calculation($('input').val());
 
         } else if (textV === '.') {
 
@@ -221,8 +223,8 @@
 
         } else if (textV === '0') {
             // $('input').val($(this).text());
-            $('input').val( $('input').val()+$(this).text());
-            calculation(textV);
+             $('input').val( $('input').val()+$(this).text());
+            calculation($('input').val());
 
         } else if (textV === '-') {
             calculate = 2;
@@ -293,6 +295,7 @@
  function calculation(num) {
      switch (calculate) {
          case 1:
+             console.log(num+"  imaya");
              result1 = parseFloat(firstNumber) + parseFloat(num);
              console.log("hi" + result1);
 
@@ -300,17 +303,17 @@
          case 2:
              result1 = parseFloat(firstNumber) - parseFloat(num);
              console.log("hi" + result);
-             $('input').val(result1);
+
              break;
          case 3:
              result1 = parseFloat(firstNumber) / parseFloat(num);
-             console.log("hi" + result);
-             $('input').val(result1);
+
+
              break;
          case 4:
              result1 = parseFloat(firstNumber) * parseFloat(num);
-             console.log("hi" + result);
-             $('input').val(result);
+
+
      }
  }
 </script>
