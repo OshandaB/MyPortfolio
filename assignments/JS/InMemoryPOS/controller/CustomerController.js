@@ -1,7 +1,13 @@
 let btnSave = $("#save");
 getAllCustomer();
+
 $("#save").click(function () {
-    saveCustomer();
+    if (checkAll()){
+        saveCustomer();
+    }else{
+        alert("Error");
+    }
+
 });
 
 
@@ -33,7 +39,8 @@ $("#btnSearch").click(function () {
     });
 });
 
-function setTextFields() {
+function setTextFields() {    let customerId = $('#floatingInput').val();
+
     $('#custTable>tr').click(function () {
         // alert("hi");
         $('#floatingInput').val($(this).children(":eq(0)").text());
@@ -47,29 +54,39 @@ function setTextFields() {
 
 function saveCustomer() {
     let customerId = $('#floatingInput').val();
-    let customerName = $('#flotingName').val();
-    let customerAdddress = $('#floatingAddress').val();
-    let customerSalary = $('#floatingSalary').val();
+    if (searchCustomer(customerId.trim()) == undefined) {
 
-    let newCustomer = Object.assign({}, customerM);
+        let customerName = $('#flotingName').val();
+        let customerAdddress = $('#floatingAddress').val();
+        let customerSalary = $('#floatingSalary').val();
 
-    newCustomer.id = customerId;
-    newCustomer.name = customerName;
-    newCustomer.address = customerAdddress;
-    newCustomer.salary = customerSalary;
+        let newCustomer = Object.assign({}, customerM);
 
-    customerDB.push(newCustomer);
-    console.log(customerDB);
-    clearTextField();
-    getAllCustomer();
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Customer has been saved successfully..!',
-        showConfirmButton: false,
-        timer: 2000
-    })
+        newCustomer.id = customerId;
+        newCustomer.name = customerName;
+        newCustomer.address = customerAdddress;
+        newCustomer.salary = customerSalary;
+        console.log(newCustomer+"amal");
+        customerDB.push(newCustomer);
 
+        clearTextField();
+        getAllCustomer();
+        loadCustomerIds();
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Customer has been saved successfully..!',
+            showConfirmButton: true,
+            timer: 2000
+        })
+    }else {
+        clearTextField();
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'This customer doesn\'t exist..!',
+        })
+    }
 }
 
 function updateCustomer(id) {
@@ -88,7 +105,7 @@ function updateCustomer(id) {
             clearTextField();
             getAllCustomer()
             Swal.fire({
-                position: 'center',
+                position: 'top-right',
                 icon: 'success',
                 title: 'Customer has been Updated successfully..!',
                 showConfirmButton: false,
@@ -100,14 +117,28 @@ function updateCustomer(id) {
 }
 
 function deleteCustomer(customerId) {
-    let consent = confirm("Do you really want to update this customer.?");
+    let consent =
+        Swal.fire({
+        position: 'center',
+        icon: 'Warning',
+        title: 'Do you really want to Delete this customer.?',
+        showConfirmButton: true,
+        timer: 2000
+    });
     if (consent) {
         for (let i = 0; i < customerDB.length; i++) {
             if (customerDB[i].id === customerId) {
                 customerDB.splice(i, 1);
-                alert("Delete Successfully!!");
+                // alert("Delete Successfully!!");
                 clearTextField();
                 getAllCustomer()
+                Swal.fire({
+                    position: 'top-up',
+                    icon: 'success',
+                    title: 'Customer has been Deleted successfully..!',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 return true;
             }
         }
@@ -145,22 +176,28 @@ function getAllCustomer() {
 
         $('#custTable').append(row);
         setTextFields();
+        doubleclick();
 
     }
 }
 
-function clearTextField() {
-    $('#floatingInput').val("");
-    $('#flotingName').val("");
-    $('#floatingAddress').val("");
-    $('#floatingSalary').val("");
+
+doubleclick();
+function doubleclick() {
+    $('#custTable>tr').dblclick(function () {
+        // alert("hi");
+        let consent =
+            Swal.fire({
+                position: 'center',
+                icon: 'Warning',
+                title: 'Do you really want to Delete this customer.?',
+                showConfirmButton: true,
+                timer: 2000
+            });
+        if (consent){
+            $(this).remove();
+        }
+
+
+    });
 }
-$('#custTable>tr').dblclick(function () {
-    // alert("hi");
-    let consent = confirm("Do you really want to Delete this customer.?");
-    if (consent){
-        $(this).remove();
-    }
-
-
-});
