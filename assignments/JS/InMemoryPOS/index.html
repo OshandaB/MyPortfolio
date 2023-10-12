@@ -697,25 +697,25 @@
                 <nav class="navbar bg-body-tertiary">
                     <div class="container-fluid">
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success " type="submit">Search</button>
+                            <input id="txtOSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button id="orderSrh" class="btn btn-outline-success " type="button">Search</button>
                         </form>
                     </div>
                 </nav>
                 <div class="form-floating mb-3 p-1">
-                    <input type="email" class="form-control" id="orId" placeholder="name@example.com">
+                    <input type="text" class="form-control" id="orId" placeholder="name@example.com">
                     <label for="orId">Order Id</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="iCode" placeholder="Password">
+                    <input type="text" class="form-control" id="iCode" placeholder="Password">
                     <label for="iCode">Item Code</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="csId" placeholder="Password">
+                    <input type="text" class="form-control" id="csId" placeholder="Password">
                     <label for="csId">Customer ID</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="pay" placeholder="Password">
+                    <input type="text" class="form-control" id="pay" placeholder="Password">
                     <label for="pay">Payment</label>
                 </div>
 
@@ -739,55 +739,55 @@
                             <th style="background-color:#0BB256" class="text-white">Customer Id</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>C001</td>
-                            <td>Isuru</td>
-                            <td>Pitiwalla</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C002</td>
-                            <td>Oshanda</td>
-                            <td>Baddegama</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C003</td>
-                            <td>Kaveen</td>
-                            <td>Waligama</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C004</td>
-                            <td>Hasith</td>
-                            <td>Galagoda</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C003</td>
-                            <td>Kaveen</td>
-                            <td>Waligama</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C004</td>
-                            <td>Hasith</td>
-                            <td>Galagoda</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C003</td>
-                            <td>Kaveen</td>
-                            <td>Waligama</td>
-                            <td>20000</td>
-                        </tr>
-                        <tr>
-                            <td>C004</td>
-                            <td>Hasith</td>
-                            <td>Galagoda</td>
-                            <td>20000</td>
-                        </tr>
+                        <tbody id="tblOrderDetails">
+<!--                        <tr>-->
+<!--                            <td>C001</td>-->
+<!--                            <td>Isuru</td>-->
+<!--                            <td>Pitiwalla</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C002</td>-->
+<!--                            <td>Oshanda</td>-->
+<!--                            <td>Baddegama</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C003</td>-->
+<!--                            <td>Kaveen</td>-->
+<!--                            <td>Waligama</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C004</td>-->
+<!--                            <td>Hasith</td>-->
+<!--                            <td>Galagoda</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C003</td>-->
+<!--                            <td>Kaveen</td>-->
+<!--                            <td>Waligama</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C004</td>-->
+<!--                            <td>Hasith</td>-->
+<!--                            <td>Galagoda</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C003</td>-->
+<!--                            <td>Kaveen</td>-->
+<!--                            <td>Waligama</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>C004</td>-->
+<!--                            <td>Hasith</td>-->
+<!--                            <td>Galagoda</td>-->
+<!--                            <td>20000</td>-->
+<!--                        </tr>-->
                         </tbody>
 
 
@@ -817,6 +817,7 @@
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
 <script src="controller/PlaceOrderController.js"></script>
+<script src="controller/OrderDetailController.js"></script>
 <script src="controller/validations/CustomerValidation.js"></script>
 <script src="controller/validations/ItemValidations.js"></script>
 <script src="controller/validations/PlaceOrderValidations.js"></script>

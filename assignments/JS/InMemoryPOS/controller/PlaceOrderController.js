@@ -25,6 +25,7 @@ enabledOrDisabledBtn()
     enabledCartBtn()
 });
 $('#btnCart').on('click', function () {
+    $('#tblCart').empty();
     addToCart();
 
 });
@@ -33,7 +34,10 @@ $('#purchaseOrder').on('click', function () {
 if (parseFloat($('#cash').val())>= parseFloat($('#SubTotal').text())){
     placeOrderB();
     clearPlaceOrderTextFields();
+    $('#tblCart').empty();
+    cartDetails=[];
     $('#oId').val(generateNextOrderId());
+
 }else {
     Swal.fire(
         'Insufficient Credit!',
@@ -41,6 +45,7 @@ if (parseFloat($('#cash').val())>= parseFloat($('#SubTotal').text())){
         'error'
     )
 }
+loadOrderDetails();
 
 });
 $('#oqty').on("keydown keyup", function (e) {
@@ -231,6 +236,7 @@ function placeOrderB() {
 
 
 generateNextOrderId();
+
     console.log(orderDB);
 
 }
