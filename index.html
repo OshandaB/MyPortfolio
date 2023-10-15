@@ -4322,7 +4322,7 @@ display: none;
     </nav>
     <div>
         <div>
-            <a href=""><i class="fa-solid fa-bars" style="color: #030303;"></i></a>
+            <a href="#"><i class="fa-solid fa-bars" style="color: #030303;"></i></a>
 
         </div>
     </div>
@@ -5077,6 +5077,16 @@ display: none;
     $(window).on('load',function (){
 
         $('#loader').fadeOut(1000);
+    });
+</script>
+<script>
+    $('header > div:last-child > div').click(function () {
+        // alert("hi");
+        $('header > nav').css('display','block');
+        $('header > nav > menu>li').css('display','block');
+    });
+    $('header > nav > menu>li').click(function () {
+        $('header > nav').css('display','none');
     });
 </script>
 </body>
