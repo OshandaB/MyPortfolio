@@ -39,18 +39,7 @@ $("#btnSearch").click(function () {
     });
 });
 
-function setTextFields() {    let customerId = $('#floatingInput').val();
 
-    $('#custTable>tr').click(function () {
-        // alert("hi");
-        $('#floatingInput').val($(this).children(":eq(0)").text());
-        $('#flotingName').val($(this).children(":eq(1)").text());
-        $('#floatingAddress').val($(this).children(":eq(2)").text());
-        $('#floatingSalary').val($(this).children(":eq(3)").text());
-        console.log($(this).children(":eq(0)").text())
-
-    });
-}
 
 function saveCustomer() {
     let customerId = $('#floatingInput').val();
@@ -70,6 +59,7 @@ function saveCustomer() {
         customerDB.push(newCustomer);
 
         clearTextField();
+
         getAllCustomer();
         loadCustomerIds();
         Swal.fire({
@@ -175,13 +165,24 @@ function getAllCustomer() {
                     </tr>`;
 
         $('#custTable').append(row);
-        setTextFields();
-        doubleclick();
+        setTextFieldss();
+
 
     }
 }
 
+function setTextFieldss() {    let customerId = $('#floatingInput').val();
 
+    $('#custTable>tr').click(function () {
+        // alert("hi");
+        $('#floatingInput').val($(this).children(":eq(0)").text());
+        $('#flotingName').val($(this).children(":eq(1)").text());
+        $('#floatingAddress').val($(this).children(":eq(2)").text());
+        $('#floatingSalary').val($(this).children(":eq(3)").text());
+        console.log($(this).children(":eq(0)").text())
+
+    });
+}
 doubleclick();
 function doubleclick() {
     $('#custTable>tr').dblclick(function () {

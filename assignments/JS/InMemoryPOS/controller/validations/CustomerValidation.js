@@ -25,7 +25,8 @@ setBtn();
 
 console.log("osbds")
 
-$("#floatingInput,#flotingName,#floatingAddress,#floatingSalary").on("keydown keyup", function (e) {
+$("#floatingInput,#flotingName,#floatingAddress,#floatingSalary").on(
+    , function (e) {
     //get the index number of data input fields indexNo
     let indexNo = c_vArray.indexOf(c_vArray.find((c) => c.field.attr("id") == e.target.id));
     // console.log("sanu "+c.field.attr("id") )
