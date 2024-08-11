@@ -2926,6 +2926,8 @@ footer > div > div > a > h1 > i {
         right: 0;
         margin: auto;
         flex-direction: column;
+        padding-top: 45px;
+
     }
 
     main > section:nth-child(8) > section:nth-child(2) > div {
