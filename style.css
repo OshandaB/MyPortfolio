@@ -4,25 +4,21 @@
     right: 0;
     top: 0;
     bottom: 0;
-    marigin: auto;
-    background: url("assets/resourses/images/rotate-pulsating-loading-animation.gif");
-    background-size: cover;
-    background-position: center;
-    background-color: #222222;
-    z-index: 5;
+    margin: auto;
+    background-color: #20232a; /* Slight transparency */
+    z-index: 1000; /* Higher z-index for better layering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#loader > div > img {
-    /*position: absolute;*/
-    /*width: 372px;*/
-
-    /*left: 0;*/
-    /*right: 0;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*margin: auto;*/
-
+#loader div {
+    width: 200px; /* Adjust size */
+    height: 200px; /* Adjust size */
+    background: url("assets/resourses/images/Spinner@1x-1.0s-200px-200px (1).svg") no-repeat center center;
+    background-size: contain;
 }
+
 
 * {
     box-sizing: border-box;
@@ -2473,8 +2469,8 @@ footer > div > div > a > h1 > i {
         width: 100px;
 
         z-index: 3;
-        left: 21px;
-        bottom: 310px;
+        left: 35px;
+        bottom: 308px;
     }
 
     main > #About > aside > div:nth-child(7) {
@@ -2497,7 +2493,7 @@ footer > div > div > a > h1 > i {
         -webkit-text-size-adjust: 100%;
         text-align: center;
         position: relative;
-        top: 51px;
+        top: 67px;
         left: -20px;
     }
 
@@ -2507,7 +2503,7 @@ footer > div > div > a > h1 > i {
         -webkit-text-size-adjust: 100%;
         text-align: center;
         position: relative;
-        top: 34px;
+        top: 51px;
         left: -20px;
         color: #FFFF;
         font-family: 'Montserrat', sans-serif;
@@ -2519,7 +2515,7 @@ footer > div > div > a > h1 > i {
         -webkit-text-size-adjust: 100%;
         text-align: center;
         position: relative;
-        top: 30px;
+        top: 48px;
         left: -22px;
         color: #FFFF;
         font-family: 'Montserrat', sans-serif;
@@ -2531,7 +2527,7 @@ footer > div > div > a > h1 > i {
         -webkit-text-size-adjust: 100%;
         text-align: center;
         position: relative;
-        top: 51px;
+        top: 66px;
         left: -22px;
     }
 
@@ -2541,10 +2537,24 @@ footer > div > div > a > h1 > i {
         -webkit-text-size-adjust: 100%;
         text-align: center;
         position: relative;
-        top: 54px;
+        top: 70px;
         left: -24px;
         color: #FFFF;
         font-family: 'Montserrat', sans-serif;
+    }
+    main > #About > section > button > svg {
+        /* margin-top: -32px; */
+        margin-left: -54px !important;
+        width: 15px !important;
+        margin-bottom: 6px !important;
+    }
+    main > #About > section > button > div > a {
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        text-decoration: none;
+        font-size: 7px;
+        margin-top:50px;
+        margin-left: -5px;
     }
 
     main > #About > aside > div:nth-child(7) > h4:nth-child(2) {
@@ -2553,7 +2563,7 @@ footer > div > div > a > h1 > i {
         -webkit-text-size-adjust: 100%;
         text-align: center;
         position: relative;
-        top: 38px;
+        top: 55px;
         left: -24px;
     }
 
@@ -2642,7 +2652,9 @@ footer > div > div > a > h1 > i {
         color: #FFFF;
         margin-top: 0;
     }
-
+    main > section:nth-child(6) > div:nth-child(4) {
+       display:none;
+    }
     main > section:nth-child(5) > hgroup > h1 {
         font-size: 180%;
         margin-top: -14px;
@@ -2708,13 +2720,62 @@ footer > div > div > a > h1 > i {
 
     main > section:nth-child(6) > section:nth-child(3) > div {
         position: relative;
-        width: 230px;
+        width: 270px;
         height: 167px;
         border-radius: 30px;
         background: #20272f;
         box-shadow: inset 32px 32px 63px #161b20, inset -32px -32px 63px #2a333e;
     }
+    main > section:nth-child(6) > section:nth-child(3) > div > h2 {
+        padding-top: 6px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        color: #FFFF;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > section > div > img:nth-child(1) {
+        width: 200px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > section > div {
+        overflow-y: hidden;
+        position: relative;
+        width: 292px;
+        height: 371px;
+        border-radius: 30px;
+        background: #20272f;
+        box-shadow: inset 2px 2px 63px 0px #494f57, inset -32px -32px 63px #2a333e;
+    }
+    main > section:nth-child(7) > section:nth-child(2) > section > div > div:nth-child(2) {
+        width: 292px;
+        height: 0px;
+        border-radius: 30px;
+        position: absolute;
+        bottom: 0;
+    }
+    main > section:nth-child(8) > section:nth-child(2) {
+       top:250px;
+        bottom:100px;
+    }
+    #Project > section:nth-child(3) > div:nth-child(1){
+        height:500px !important;
+    }
+    #Project > section:nth-child(3) > div:nth-child(2){
+        height:500px !important;
 
+    }
+    #Project > section:nth-child(3) > div:nth-child(3){
+        height:500px !important;
+
+    }
+    main > section:nth-child(6) > section:nth-child(3) {
+        height:582px;
+    }
     main > section:nth-child(6) > div:nth-child(6) {
         display: none;
         position: absolute;
